@@ -65,3 +65,31 @@ data_pembangunan <- data_pembangunan[complete.cases(data_pembangunan[, c("pdrb_p
 
 ("--- Memeriksa kembali apakah jumlah baris dataset sudah diperbarui setelah penghapusan ---")
 print(nrow(data_pembangunan))
+
+# ======================
+# 1.3.4 Analisis Outlier
+# ======================
+("--- Mengambil kolom variabel yang bertipe data numerik ---")
+numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
+
+("--- Menghitung IQR tiap kolom numerik ---")
+for(column_name in numeric_columns_name) {
+  Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
+  Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
+  
+  IQR <- Q3 - Q1
+  
+  lower_bound <- Q1 - 1.5 * IQR
+  upper_bound <- Q3 + 1.5 * IQR
+  
+  total_outlier <- sum(data_pembangunan[[column_name]] < lower_bound | data_pembangunan[[column_name]] > upper_bound, na.rm = TRUE)
+  
+  cat(column_name, ":", total_outlier, "outlier\n")
+}
+
+("--- Membuat beberapa boxplot untuk visualisasi outlier ---")
+par(mfrow = c(2, 3))
+
+for(col in numeric_columns_name) {
+  boxplot(data_pembangunan[[col]], main = col)
+}
