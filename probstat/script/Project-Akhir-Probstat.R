@@ -1,7 +1,7 @@
 # ======================
 # 1.3.1 Memahami Dataset
 # ======================
-data_pembangunan <- read.csv("./probstat/dataset/pembangunan_wilayah_missing_outlier.csv")
+data_pembangunan <- read.csv("probstat/dataset/pembangunan_wilayah_missing_outlier.csv")
 ("--- STRUKTUR DATA ---")
 str(data_pembangunan)
 
@@ -93,3 +93,34 @@ par(mfrow = c(2, 3))
 for(col in numeric_columns_name) {
   boxplot(data_pembangunan[[col]], main = col)
 }
+
+
+
+
+
+# ============================
+# 1.3.7 Analisis Korelasi
+# ============================
+data_bersih <- data_pembangunan[complete.cases(data_pembangunan), ]
+kolom_numerik_korelasi <- c("pdrb_perkapita", "kemiskinan", "pengangguran", "ipm", 
+                            "harapan_hidup", "rata_lama_sekolah", "akses_internet", 
+                            "jalan_baik", "air_bersih")
+
+matriks_numerik <- data_bersih[, kolom_numerik_korelasi]
+
+cat("--- Menghitung korelasi antar variabel ---")
+matriks_korelasi <- cor(matriks_numerik, method = "pearson")
+print(round(matriks_korelasi, 3))
+
+cat("--- UJI KORELASI: IPM vs KEMISKINAN ---")
+uji_ipm_kemiskinan <- cor.test(data_bersih$ipm, data_bersih$kemiskinan)
+print(uji_ipm_kemiskinan)
+
+cat("--- UJI KORELASI: AKSES INTERNET vs RATA-LAMA SEKOLAH ---")
+uji_internet_sekolah <- cor.test(data_bersih$akses_internet, data_bersih$rata_lama_sekolah)
+print(uji_internet_sekolah)
+
+cat("--- UJI KORELASI: PDRB PERKAPITA vs IPM (KESEJAHTERAAN) ---")
+uji_pdrb_ipm <- cor.test(data_bersih$pdrb_perkapita, data_bersih$ipm)
+print(uji_pdrb_ipm)
+
