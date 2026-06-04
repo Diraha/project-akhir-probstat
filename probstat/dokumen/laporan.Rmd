@@ -1,0 +1,96 @@
+---
+title: ""
+output: pdf_document
+date: ""
+header-includes:
+  - \usepackage{mathptmx}
+  - \usepackage{indentfirst}
+  - \setlength{\parindent}{1.18cm}
+
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+\begin{center}
+
+{\bfseries
+
+\Large ANALISIS DATA PEMBANGUNAN WILAYAH MENGGUNAKAN R
+
+\vspace{3cm}
+
+{\large Disusun Oleh:}
+
+\vspace{0.7cm}
+
+\begin{tabular}{ll}
+Diaz Ramaananta Harahap      & J0403251048 \\
+Nashira Salima Firmansyah    & J0403251056 \\
+Dede Risma Komalasari        & J0403251049 \\
+Zalfa Nazla Azkiya           & J0403251037 \\
+Fahrizal Azis                & J0403251151 \\
+Muhamad Akbar Zainuri        & J0403251008 \\
+\end{tabular}
+
+\vspace*{3cm}
+
+\includegraphics[width=3cm]{Logo_IPB.png}
+
+\vfill
+
+MATA KULIAH PROBABILITAS \& STATISTIKA
+
+PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK
+
+SEKOLAH VOKASI
+
+INSITUT PERTANIAN BOGOR
+
+2026
+
+}
+
+\end{center}
+
+\thispagestyle{empty}
+
+\newpage
+
+
+
+
+\begin{center}
+
+{\bfseries
+
+\vfill
+
+\Large
+
+BAB I
+
+PEENDAHULUAN
+
+}
+
+\end{center}
+
+## \normalsize 1.1  \hspace {0,5cm} Latar Belakang
+
+  Pembangunan wilayah adalah sebuah proses yang bertujuan untuk meningkatkan kesejahteraan masyarakat. Untuk mengetahui bagaimana suatu pembangunan wilayah di suatu daerah berhasil diperlukan indikator yang dapat menggambarkan keadaan masyarakat di wilayah tersebut dengan jelas, seperti angka kemiskinan, pengangguran, Produk Domestik Regional Bruto (PDRB), serta indeks pembangunan Manusia (IPM).
+  
+  Oleh karena itu, diperlukan analisis data untuk mengolah informasi yang ada agar dapat memberikan gambaran tentang kondisi pembangunan di suatu wilayah. Berdasarkan kebutuhan tersebut, projek ini bertujuan untuk menganalisis data pembangunan wilayah di seluruh Indonesia dengan mengimplementasikan bahasa pemrograman R. Melalui projek akhir ini, mahasiswa diharapkan dapat meningkatkan keterampilan mereka dalam mengolah, menganalisis, dan menginterpretasikan data terkait pembangunan daerah dengan memanfaatkan bahasa pemrograman R.
+  
+## \normalsize 1.2  \hspace {0,5cm} Tujuan
+
+  Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Indonesia dengan memanfaatkan bahasa pemrograman R. Analisis dilakukan untuk mengenali ciri-ciri data, memahami hubungan di antara indikator pembangunan, serta mengungkap faktor-faktor yang memengaruhi tingkat perkembangan suatu daerah. Di samping itu, proyek ini bertujuan untuk mengaplikasikan konsep statistika dan analisis data dalam menyelesaikan masalah yang ada serta menyajikan hasil analisis dengan cara yang terstruktur dan informatif.
+
+\setcounter{page}{1}
+
+\newpage
+
+
+
