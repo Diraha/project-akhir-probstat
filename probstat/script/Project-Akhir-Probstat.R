@@ -61,7 +61,7 @@ percentage_missing_value_df <- mean(is.na(data_pembangunan)) * 100
 print(percentage_missing_value_df)
 
 ("--- Karena persentase 0.4% < 30%, maka metode yang diambil adalah metode penghapusan ---")
-data_pembangunan <- data_pembangunan[complete.cases(data_pembangunan[, c("pdrb_perkapita", "kemiskinan", "pengangguran", "ipm", "akses_internet", "jalan_baik")]), ]
+data_pembangunan <- na.omit(data_pembangunan)
 
 ("--- Memeriksa kembali apakah jumlah baris dataset sudah diperbarui setelah penghapusan ---")
 print(nrow(data_pembangunan))

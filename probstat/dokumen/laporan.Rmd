@@ -160,6 +160,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
+Missing value, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam data set tidak
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
 
