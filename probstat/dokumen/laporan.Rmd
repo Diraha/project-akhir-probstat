@@ -160,7 +160,10 @@ knitr::opts_chunk$set(echo = TRUE)
 ## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
-Missing value, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam data set tidak
+Missing value, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam data set tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan.Salah satu metode penanganan missing value adalah dengan menghapus data. Metode ini sederhana dan sangat efektif jika jumlah missing value kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
+Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki missing value dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
+
+Berdasarkan hasil analisis, rata-rata persentase yang dihasilkan sebesar 0.45%, yang artinya metode panghapusan dapat dilakukan untuk menangani masalah ini, karena proporsi missing value < 1% dari total observasi, data yang mengandung missing value dihapus dengan asumsi kehilangan data tidak memberikan dampak signifikan.
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
 
