@@ -1,12 +1,22 @@
 ---
 title: ""
-output: pdf_document
-date: ""
-header-includes:
-  - \usepackage{mathptmx}
-  - \usepackage{indentfirst}
-  - \setlength{\parindent}{1.18cm}
 
+output:
+  pdf_document:
+    latex_engine: xelatex
+    
+date: ""
+
+fontsize: 12pt
+
+header-includes:
+  - \usepackage{fontspec}
+  - \usepackage{indentfirst}
+  - \usepackage{setspace}
+  
+  - \setmainfont{Times New Roman}
+  - \setlength{\parindent}{1.18cm}
+  - \setstretch{1.5}
 ---
 
 ```{r setup, include=FALSE}
@@ -16,42 +26,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \begin{center}
 
-{\bfseries
+  {
+    \bfseries
+    \Large 
+    
+    ANALISIS DATA PEMBANGUNAN WILAYAH MENGGUNAKAN R
 
-\Large ANALISIS DATA PEMBANGUNAN WILAYAH MENGGUNAKAN R
+    \vspace{3cm}
 
-\vspace{3cm}
+    {
+      \large Disusun Oleh:
+    }
 
-{\large Disusun Oleh:}
+    \vspace{0.7cm}
 
-\vspace{0.7cm}
+    \begin{tabular}{ll}
+    Diaz Ramaananta Harahap      & J0403251048 \\
+    Nashira Salima Firmansyah    & J0403251056 \\
+    Dede Risma Komalasari        & J0403251049 \\
+    Zalfa Nazla Azkiya           & J0403251037 \\
+    Fahrizal Azis                & J0403251151 \\
+    Muhamad Akbar Zainuri        & J0403251008 \\
+    \end{tabular}
 
-\begin{tabular}{ll}
-Diaz Ramaananta Harahap      & J0403251048 \\
-Nashira Salima Firmansyah    & J0403251056 \\
-Dede Risma Komalasari        & J0403251049 \\
-Zalfa Nazla Azkiya           & J0403251037 \\
-Fahrizal Azis                & J0403251151 \\
-Muhamad Akbar Zainuri        & J0403251008 \\
-\end{tabular}
+    \vspace*{3cm}
 
-\vspace*{3cm}
+    \includegraphics[width=3cm]{../gambar/Logo_IPB.png}
+  
+    \vfill
 
-\includegraphics[width=3cm]{Logo_IPB.png}
+    MATA KULIAH PROBABILITAS \& STATISTIKA
 
-\vfill
+    PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK
 
-MATA KULIAH PROBABILITAS \& STATISTIKA
+    SEKOLAH VOKASI
 
-PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK
+    INSITUT PERTANIAN BOGOR
 
-SEKOLAH VOKASI
+    2026
 
-INSITUT PERTANIAN BOGOR
-
-2026
-
-}
+  }
 
 \end{center}
 
