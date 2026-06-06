@@ -52,7 +52,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
     \vspace*{3cm}
 
-    \includegraphics[width=3cm]{../gambar/Logo_IPB.png}
   
     \vfill
 
@@ -158,6 +157,41 @@ knitr::opts_chunk$set(echo = TRUE)
 \end{center}
 
 ## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
+
+  Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
+
+  Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh variabel numerik pada dataset pembangunan wilayah menggunakan beberapa fungsi dalam bahasa pemrograman R seperti \textit{summary()}, \textit{mean()}, \textit{median()}, \textit{sd()}, \textit{var()}, dan \textit{quantile()}.
+
+\begin{center}
+\textbf{Tabel 3.1 Hasil Statistika Deskriptif}
+
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Variabel} & \textbf{Mean} & \textbf{SD} & \textbf{Keterangan} \\
+\hline
+pdrb\_perkapita & Tinggi & Paling besar & Penyebaran sangat tinggi \\
+\hline
+kemiskinan & 13,72 & Cukup besar & Terdapat variasi data \\
+\hline
+pengangguran & 8 & Besar & Indikasi data ekstrem \\
+\hline
+ipm & 69--70 & Relatif kecil & Distribusi stabil \\
+\hline
+harapan\_hidup & 69 tahun & Relatif kecil & Distribusi stabil \\
+\hline
+rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
+\hline
+\end{tabular}
+
+\end{center}
+
+  Berdasarkan hasil analisis, variabel \textit{pdrb\_perkapita} memiliki nilai rata-rata tertinggi dibandingkan variabel lainnya. Selain itu, variabel tersebut juga mempunyai standar deviasi terbesar yang menunjukkan bahwa terdapat perbedaan tingkat pendapatan yang cukup besar antar wilayah di Indonesia.
+
+  Variabel \textit{kemiskinan} dan \textit{pengangguran} juga menunjukkan penyebaran data yang cukup besar. Hal ini terlihat dari rentang nilai minimum dan maksimum yang jauh berbeda. Pada variabel pengangguran, nilai maksimum bahkan jauh di atas rata-ratanya sehingga mengindikasikan adanya beberapa data ekstrem.
+
+  Sementara itu, variabel seperti \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki nilai mean dan median yang relatif berdekatan. Kondisi tersebut menunjukkan bahwa distribusi data pada variabel pembangunan manusia cenderung lebih stabil dan tidak terlalu menyebar.
+
+  Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat outlier pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai missing value dan outlier perlu dilakukan pada tahap berikutnya.
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
 Missing value, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam data set tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan.Salah satu metode penanganan missing value adalah dengan menghapus data. Metode ini sederhana dan sangat efektif jika jumlah missing value kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
