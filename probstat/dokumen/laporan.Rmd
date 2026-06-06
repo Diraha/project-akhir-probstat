@@ -23,9 +23,10 @@ header-includes:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+<!-- =================================================================== -->
+<!-- =                           COVER PAGE                            = -->
+<!-- =================================================================== -->
 \begin{center}
-
   {
     \bfseries
     \Large 
@@ -66,30 +67,30 @@ knitr::opts_chunk$set(echo = TRUE)
     2026
 
   }
-
 \end{center}
 
 \thispagestyle{empty}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
 
 \newpage
 
-
-
-
+<!-- =================================================================== -->
+<!-- =                              BAB I                              = -->
+<!-- =================================================================== -->
 \begin{center}
+  {
+    \bfseries
 
-{\bfseries
+    \vfill
 
-\vfill
+    \Large
 
-\Large
+    BAB I
 
-BAB I
-
-PEENDAHULUAN
-
-}
-
+    PENDAHULUAN
+  }
 \end{center}
 
 ## \normalsize 1.1  \hspace {0,5cm} Latar Belakang
@@ -103,8 +104,130 @@ PEENDAHULUAN
   Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Indonesia dengan memanfaatkan bahasa pemrograman R. Analisis dilakukan untuk mengenali ciri-ciri data, memahami hubungan di antara indikator pembangunan, serta mengungkap faktor-faktor yang memengaruhi tingkat perkembangan suatu daerah. Di samping itu, proyek ini bertujuan untuk mengaplikasikan konsep statistika dan analisis data dalam menyelesaikan masalah yang ada serta menyajikan hasil analisis dengan cara yang terstruktur dan informatif.
 
 \setcounter{page}{1}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
 
 \newpage
 
+<!-- =================================================================== -->
+<!-- =                             BAB II                              = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+    
+    \vfill
+    
+    \Large
+    
+    BAB II
+    
+    METODOLOGI
+  }
+\end{center}
 
+## \normalsize 2.1  \hspace {0,5cm} Dataset
 
+## \normalsize 2.2  \hspace {0,5cm} Tools Yang Digunakan
+
+## \normalsize 2.3  \hspace {0,5cm} Metode Analisis
+
+\setcounter{page}{2}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+<!-- =================================================================== -->
+<!-- =                            BAB III                              = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+    
+    \vfill
+    
+    \Large
+    
+    BAB III
+    
+    HASIL DAN PEMBAHASAN
+  }
+\end{center}
+
+## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
+
+## \normalsize 3.2  \hspace {0,5cm} Missing Value
+
+## \normalsize 3.3  \hspace {0,5cm} Outlier
+
+## \normalsize 3.4  \hspace {0,5cm} Visualisasi
+
+## \normalsize 3.5  \hspace {0,5cm} Distribusi Data
+
+## \normalsize 3.6  \hspace {0,5cm} Korelasi
+
+## \normalsize 3.7  \hspace {0,5cm} Interpretasi
+
+\setcounter{page}{3}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+<!-- =================================================================== -->
+<!-- =                             BAB IV                              = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+    
+    \vfill
+    
+    \Large
+    
+    BAB IV
+    
+    KESIMPULAN
+  }
+\end{center}
+
+## \normalsize 4.1  \hspace {0,5cm} Kesimpulan Utama
+
+## \normalsize 4.2  \hspace {0,5cm} Insight
+
+## \normalsize 4.3  \hspace {0,5cm} Saran
+
+\setcounter{page}{4}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+<!-- =================================================================== -->
+<!-- =                             LAMPIRAN                            = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+    
+    \vfill
+    
+    \Large
+    
+    LAMPIRAN
+  }
+\end{center}
+
+## \normalsize 5.1  \hspace {0,5cm} Script R
+
+## \normalsize 5.2  \hspace {0,5cm} Output Tambahan
+
+\setcounter{page}{5}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
