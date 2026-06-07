@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.8)  8 JUN 2026 01:26
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.8)  8 JUN 2026 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1061,24 +1061,27 @@ Underfull \hbox (badness 1248) in paragraph at lines 479--485
 File: ../gambar/boxplot_outlier.png Graphic file (type bmp)
 <../gambar/boxplot_outlier.png>
 [6]
+File: ../gambar/histogramIPM.png Graphic file (type bmp)
+<../gambar/histogramIPM.png>
+[7]
 
-LaTeX Warning: File `..../gambar/histogramIPM.png' not found on input line 615.
+LaTeX Warning: File `../gambar/histogram_kemiskinan.png' not found on input line 627.
 
-! Unable to load picture or PDF file '..../gambar/histogramIPM.png'.
+! Unable to load picture or PDF file '../gambar/histogram_kemiskinan.png'.
 <to be read again> 
                    }
-l.615 ...width=12cm]{..../gambar/histogramIPM.png}
+l.627 ...12cm]{../gambar/histogram_kemiskinan.png}
                                                   
 The requested image couldn't be read because
 it was not a recognized image format.
 
  
 Here is how much of TeX's memory you used:
- 18438 strings out of 469836
- 345093 string characters out of 5468049
+ 18446 strings out of 469836
+ 345649 string characters out of 5468049
  904310 words of memory out of 5000000
- 47166 multiletter control sequences out of 15000+600000
+ 47174 multiletter control sequences out of 15000+600000
  631326 words of font info for 82 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  90i,7n,116p,454b,480s stack positions out of 10000i,1000n,20000p,200000b,200000s
-Output written on laporan.pdf (10 pages).
+Output written on laporan.pdf (11 pages).

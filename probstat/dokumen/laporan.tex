@@ -612,7 +612,7 @@ hubungan antar variabel pembangunan wilayah.
 \begin{center}
 \textbf{Gambar 3.2 Histogram Nilai IPM}
 
-\includegraphics[width=12cm]{..../gambar/histogramIPM.png}
+\includegraphics[width=12cm]{../gambar/histogramIPM.png}
 \end{center}
 
 Berdasarkan histogram nilai IPM, sebagian besar data terkonsentrasi pada
@@ -1301,117 +1301,56 @@ R}{5.1  Script R}}\label{script-r}
 Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 
 \begin{verbatim}
-##           wilayah          provinsi 
-##       "character"       "character" 
-##             tahun    pdrb_perkapita 
-##         "integer"         "numeric" 
-##        kemiskinan      pengangguran 
-##         "numeric"         "numeric" 
-##               ipm     harapan_hidup 
-##         "numeric"         "numeric" 
-## rata_lama_sekolah    akses_internet 
-##         "numeric"         "numeric" 
-##        jalan_baik        air_bersih 
-##         "numeric"         "numeric" 
-##      catatan_data 
-##       "character"
+##           wilayah          provinsi             tahun    pdrb_perkapita        kemiskinan 
+##       "character"       "character"         "integer"         "numeric"         "numeric" 
+##      pengangguran               ipm     harapan_hidup rata_lama_sekolah    akses_internet 
+##         "numeric"         "numeric"         "numeric"         "numeric"         "numeric" 
+##        jalan_baik        air_bersih      catatan_data 
+##         "numeric"         "numeric"       "character"
 \end{verbatim}
 
 \begin{verbatim}
-##            wilayah         provinsi tahun
-## 1 Kabupaten/Kota_1       Jawa Barat  2022
-## 2 Kabupaten/Kota_2       Jawa Timur  2022
-## 3 Kabupaten/Kota_3 Kalimantan Timur  2020
-## 4 Kabupaten/Kota_4      DKI Jakarta  2022
-## 5 Kabupaten/Kota_5 Sulawesi Selatan  2023
-## 6 Kabupaten/Kota_6       Jawa Timur  2020
-##   pdrb_perkapita kemiskinan pengangguran
-## 1       38403994      19.69         4.73
-## 2      165582092       9.68         4.43
-## 3       26780948       4.13         2.99
-## 4      155034790      20.43         3.90
-## 5      198834591      14.39        12.15
-## 6      145702606      17.14         3.38
-##     ipm harapan_hidup rata_lama_sekolah
-## 1 80.16         75.75              8.41
-## 2 55.05         67.85              5.79
-## 3 78.70         60.38             13.20
-## 4 73.27         69.49             12.28
-## 5 72.90         75.00              9.69
-## 6 65.11         67.04              5.66
-##   akses_internet jalan_baik air_bersih
-## 1          63.86      53.86      43.11
-## 2          66.61      34.89      58.93
-## 3          64.73      48.57      90.27
-## 4          44.59      57.88      86.16
-## 5          52.72      65.70      90.84
-## 6          55.63      70.12      60.17
-##   catatan_data
-## 1       Normal
-## 2       Normal
-## 3       Normal
-## 4       Normal
-## 5       Normal
-## 6       Normal
+##            wilayah         provinsi tahun pdrb_perkapita kemiskinan pengangguran   ipm
+## 1 Kabupaten/Kota_1       Jawa Barat  2022       38403994      19.69         4.73 80.16
+## 2 Kabupaten/Kota_2       Jawa Timur  2022      165582092       9.68         4.43 55.05
+## 3 Kabupaten/Kota_3 Kalimantan Timur  2020       26780948       4.13         2.99 78.70
+## 4 Kabupaten/Kota_4      DKI Jakarta  2022      155034790      20.43         3.90 73.27
+## 5 Kabupaten/Kota_5 Sulawesi Selatan  2023      198834591      14.39        12.15 72.90
+## 6 Kabupaten/Kota_6       Jawa Timur  2020      145702606      17.14         3.38 65.11
+##   harapan_hidup rata_lama_sekolah akses_internet jalan_baik air_bersih catatan_data
+## 1         75.75              8.41          63.86      53.86      43.11       Normal
+## 2         67.85              5.79          66.61      34.89      58.93       Normal
+## 3         60.38             13.20          64.73      48.57      90.27       Normal
+## 4         69.49             12.28          44.59      57.88      86.16       Normal
+## 5         75.00              9.69          52.72      65.70      90.84       Normal
+## 6         67.04              5.66          55.63      70.12      60.17       Normal
 \end{verbatim}
 
 \begin{verbatim}
-##    wilayah            provinsi        
-##  Length:2500        Length:2500       
-##  Class :character   Class :character  
-##  Mode  :character   Mode  :character  
-##                                       
-##                                       
-##                                       
-##                                       
-##      tahun      pdrb_perkapita     
-##  Min.   :2020   Min.   :1.503e+07  
-##  1st Qu.:2021   1st Qu.:6.962e+07  
-##  Median :2022   Median :1.373e+08  
-##  Mean   :2022   Mean   :1.357e+08  
-##  3rd Qu.:2023   3rd Qu.:1.939e+08  
-##  Max.   :2024   Max.   :1.775e+09  
-##                 NA's   :25         
-##    kemiskinan     pengangguran   
-##  Min.   : 2.01   Min.   : 1.010  
-##  1st Qu.: 7.86   1st Qu.: 4.350  
-##  Median :13.72   Median : 8.230  
-##  Mean   :13.72   Mean   : 8.046  
-##  3rd Qu.:19.39   3rd Qu.:11.520  
-##  Max.   :67.53   Max.   :47.040  
-##  NA's   :24      NA's   :25      
-##       ipm        harapan_hidup  
-##  Min.   :55.01   Min.   :60.01  
-##  1st Qu.:62.52   1st Qu.:64.66  
-##  Median :69.89   Median :69.30  
-##  Mean   :69.90   Mean   :69.13  
-##  3rd Qu.:77.16   3rd Qu.:73.58  
-##  Max.   :84.99   Max.   :77.99  
-##  NA's   :25                     
-##  rata_lama_sekolah akses_internet 
-##  Min.   : 5.020    Min.   : 0.01  
-##  1st Qu.: 7.327    1st Qu.:38.91  
-##  Median : 9.520    Median :58.09  
-##  Mean   : 9.581    Mean   :58.79  
-##  3rd Qu.:11.912    3rd Qu.:78.67  
-##  Max.   :14.000    Max.   :97.99  
-##                    NA's   :25     
-##    jalan_baik      air_bersih   
-##  Min.   :30.01   Min.   :40.03  
-##  1st Qu.:47.40   1st Qu.:54.32  
-##  Median :65.02   Median :69.68  
-##  Mean   :65.26   Mean   :69.76  
-##  3rd Qu.:83.24   3rd Qu.:85.18  
-##  Max.   :99.95   Max.   :99.99  
-##  NA's   :25                     
-##  catatan_data      
-##  Length:2500       
-##  Class :character  
-##  Mode  :character  
-##                    
-##                    
-##                    
-## 
+##    wilayah            provinsi             tahun      pdrb_perkapita        kemiskinan   
+##  Length:2500        Length:2500        Min.   :2020   Min.   :1.503e+07   Min.   : 2.01  
+##  Class :character   Class :character   1st Qu.:2021   1st Qu.:6.962e+07   1st Qu.: 7.86  
+##  Mode  :character   Mode  :character   Median :2022   Median :1.373e+08   Median :13.72  
+##                                        Mean   :2022   Mean   :1.357e+08   Mean   :13.72  
+##                                        3rd Qu.:2023   3rd Qu.:1.939e+08   3rd Qu.:19.39  
+##                                        Max.   :2024   Max.   :1.775e+09   Max.   :67.53  
+##                                                       NA's   :25          NA's   :24     
+##   pengangguran         ipm        harapan_hidup   rata_lama_sekolah akses_internet 
+##  Min.   : 1.010   Min.   :55.01   Min.   :60.01   Min.   : 5.020    Min.   : 0.01  
+##  1st Qu.: 4.350   1st Qu.:62.52   1st Qu.:64.66   1st Qu.: 7.327    1st Qu.:38.91  
+##  Median : 8.230   Median :69.89   Median :69.30   Median : 9.520    Median :58.09  
+##  Mean   : 8.046   Mean   :69.90   Mean   :69.13   Mean   : 9.581    Mean   :58.79  
+##  3rd Qu.:11.520   3rd Qu.:77.16   3rd Qu.:73.58   3rd Qu.:11.912    3rd Qu.:78.67  
+##  Max.   :47.040   Max.   :84.99   Max.   :77.99   Max.   :14.000    Max.   :97.99  
+##  NA's   :25       NA's   :25                                        NA's   :25     
+##    jalan_baik      air_bersih    catatan_data      
+##  Min.   :30.01   Min.   :40.03   Length:2500       
+##  1st Qu.:47.40   1st Qu.:54.32   Class :character  
+##  Median :65.02   Median :69.68   Mode  :character  
+##  Mean   :65.26   Mean   :69.76                     
+##  3rd Qu.:83.24   3rd Qu.:85.18                     
+##  Max.   :99.95   Max.   :99.99                     
+##  NA's   :25
 \end{verbatim}
 
 \begin{verbatim}
@@ -1423,151 +1362,79 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 \end{verbatim}
 
 \begin{verbatim}
-##      tahun      pdrb_perkapita     
-##  Min.   :2020   Min.   :1.503e+07  
-##  1st Qu.:2021   1st Qu.:6.962e+07  
-##  Median :2022   Median :1.373e+08  
-##  Mean   :2022   Mean   :1.357e+08  
-##  3rd Qu.:2023   3rd Qu.:1.939e+08  
-##  Max.   :2024   Max.   :1.775e+09  
-##                 NA's   :25         
-##    kemiskinan     pengangguran   
-##  Min.   : 2.01   Min.   : 1.010  
-##  1st Qu.: 7.86   1st Qu.: 4.350  
-##  Median :13.72   Median : 8.230  
-##  Mean   :13.72   Mean   : 8.046  
-##  3rd Qu.:19.39   3rd Qu.:11.520  
-##  Max.   :67.53   Max.   :47.040  
-##  NA's   :24      NA's   :25      
-##       ipm        harapan_hidup  
-##  Min.   :55.01   Min.   :60.01  
-##  1st Qu.:62.52   1st Qu.:64.66  
-##  Median :69.89   Median :69.30  
-##  Mean   :69.90   Mean   :69.13  
-##  3rd Qu.:77.16   3rd Qu.:73.58  
-##  Max.   :84.99   Max.   :77.99  
-##  NA's   :25                     
-##  rata_lama_sekolah akses_internet 
-##  Min.   : 5.020    Min.   : 0.01  
-##  1st Qu.: 7.327    1st Qu.:38.91  
-##  Median : 9.520    Median :58.09  
-##  Mean   : 9.581    Mean   :58.79  
-##  3rd Qu.:11.912    3rd Qu.:78.67  
-##  Max.   :14.000    Max.   :97.99  
-##                    NA's   :25     
-##    jalan_baik      air_bersih   
-##  Min.   :30.01   Min.   :40.03  
-##  1st Qu.:47.40   1st Qu.:54.32  
-##  Median :65.02   Median :69.68  
-##  Mean   :65.26   Mean   :69.76  
-##  3rd Qu.:83.24   3rd Qu.:85.18  
-##  Max.   :99.95   Max.   :99.99  
-##  NA's   :25
+##      tahun      pdrb_perkapita        kemiskinan     pengangguran         ipm       
+##  Min.   :2020   Min.   :1.503e+07   Min.   : 2.01   Min.   : 1.010   Min.   :55.01  
+##  1st Qu.:2021   1st Qu.:6.962e+07   1st Qu.: 7.86   1st Qu.: 4.350   1st Qu.:62.52  
+##  Median :2022   Median :1.373e+08   Median :13.72   Median : 8.230   Median :69.89  
+##  Mean   :2022   Mean   :1.357e+08   Mean   :13.72   Mean   : 8.046   Mean   :69.90  
+##  3rd Qu.:2023   3rd Qu.:1.939e+08   3rd Qu.:19.39   3rd Qu.:11.520   3rd Qu.:77.16  
+##  Max.   :2024   Max.   :1.775e+09   Max.   :67.53   Max.   :47.040   Max.   :84.99  
+##                 NA's   :25          NA's   :24      NA's   :25       NA's   :25     
+##  harapan_hidup   rata_lama_sekolah akses_internet    jalan_baik      air_bersih   
+##  Min.   :60.01   Min.   : 5.020    Min.   : 0.01   Min.   :30.01   Min.   :40.03  
+##  1st Qu.:64.66   1st Qu.: 7.327    1st Qu.:38.91   1st Qu.:47.40   1st Qu.:54.32  
+##  Median :69.30   Median : 9.520    Median :58.09   Median :65.02   Median :69.68  
+##  Mean   :69.13   Mean   : 9.581    Mean   :58.79   Mean   :65.26   Mean   :69.76  
+##  3rd Qu.:73.58   3rd Qu.:11.912    3rd Qu.:78.67   3rd Qu.:83.24   3rd Qu.:85.18  
+##  Max.   :77.99   Max.   :14.000    Max.   :97.99   Max.   :99.95   Max.   :99.99  
+##                                    NA's   :25      NA's   :25
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##      2.021999e+03      1.356505e+08 
-##        kemiskinan      pengangguran 
-##      1.372146e+01      8.045733e+00 
-##               ipm     harapan_hidup 
-##      6.989999e+01      6.913015e+01 
-## rata_lama_sekolah    akses_internet 
-##      9.580684e+00      5.878903e+01 
-##        jalan_baik        air_bersih 
-##      6.525808e+01      6.976153e+01
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##      2.021999e+03      1.356505e+08      1.372146e+01      8.045733e+00      6.989999e+01 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##      6.913015e+01      9.580684e+00      5.878903e+01      6.525808e+01      6.976153e+01
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##      2.022000e+03      1.373106e+08 
-##        kemiskinan      pengangguran 
-##      1.372000e+01      8.230000e+00 
-##               ipm     harapan_hidup 
-##      6.989000e+01      6.929500e+01 
-## rata_lama_sekolah    akses_internet 
-##      9.520000e+00      5.809000e+01 
-##        jalan_baik        air_bersih 
-##      6.502000e+01      6.968000e+01
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##      2.022000e+03      1.373106e+08      1.372000e+01      8.230000e+00      6.989000e+01 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##      6.929500e+01      9.520000e+00      5.809000e+01      6.502000e+01      6.968000e+01
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##           2020.00       15031581.00 
-##        kemiskinan      pengangguran 
-##              2.01              1.01 
-##               ipm     harapan_hidup 
-##             55.01             60.01 
-## rata_lama_sekolah    akses_internet 
-##              5.02              0.01 
-##        jalan_baik        air_bersih 
-##             30.01             40.03
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##           2020.00       15031581.00              2.01              1.01             55.01 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##             60.01              5.02              0.01             30.01             40.03
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##      2.024000e+03      1.774545e+09 
-##        kemiskinan      pengangguran 
-##      6.753000e+01      4.704000e+01 
-##               ipm     harapan_hidup 
-##      8.499000e+01      7.799000e+01 
-## rata_lama_sekolah    akses_internet 
-##      1.400000e+01      9.799000e+01 
-##        jalan_baik        air_bersih 
-##      9.995000e+01      9.999000e+01
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##      2.024000e+03      1.774545e+09      6.753000e+01      4.704000e+01      8.499000e+01 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##      7.799000e+01      1.400000e+01      9.799000e+01      9.995000e+01      9.999000e+01
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##      1.431789e+00      8.934127e+07 
-##        kemiskinan      pengangguran 
-##      6.894704e+00      4.258576e+00 
-##               ipm     harapan_hidup 
-##      8.535062e+00      5.171779e+00 
-## rata_lama_sekolah    akses_internet 
-##      2.627008e+00      2.282030e+01 
-##        jalan_baik        air_bersih 
-##      2.036569e+01      1.749921e+01
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##      1.431789e+00      8.934127e+07      6.894704e+00      4.258576e+00      8.535062e+00 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##      5.171779e+00      2.627008e+00      2.282030e+01      2.036569e+01      1.749921e+01
 \end{verbatim}
 
 \begin{verbatim}
-##             tahun    pdrb_perkapita 
-##      2.050019e+00      7.981863e+15 
-##        kemiskinan      pengangguran 
-##      4.753694e+01      1.813547e+01 
-##               ipm     harapan_hidup 
-##      7.284728e+01      2.674730e+01 
-## rata_lama_sekolah    akses_internet 
-##      6.901173e+00      5.207660e+02 
-##        jalan_baik        air_bersih 
-##      4.147613e+02      3.062222e+02
+##             tahun    pdrb_perkapita        kemiskinan      pengangguran               ipm 
+##      2.050019e+00      7.981863e+15      4.753694e+01      1.813547e+01      7.284728e+01 
+##     harapan_hidup rata_lama_sekolah    akses_internet        jalan_baik        air_bersih 
+##      2.674730e+01      6.901173e+00      5.207660e+02      4.147613e+02      3.062222e+02
 \end{verbatim}
 
 \begin{verbatim}
-##      tahun pdrb_perkapita kemiskinan
-## 0%    2020       15031581     2.0100
-## 25%   2021       69622210     7.8600
-## 50%   2022      137310624    13.7200
-## 75%   2023      193899157    19.3925
-## 100%  2024     1774545027    67.5300
-##      pengangguran   ipm harapan_hidup
-## 0%           1.01 55.01       60.0100
-## 25%          4.35 62.52       64.6575
-## 50%          8.23 69.89       69.2950
-## 75%         11.52 77.16       73.5850
-## 100%        47.04 84.99       77.9900
-##      rata_lama_sekolah akses_internet
-## 0%              5.0200          0.010
-## 25%             7.3275         38.915
-## 50%             9.5200         58.090
-## 75%            11.9125         78.670
-## 100%           14.0000         97.990
-##      jalan_baik air_bersih
-## 0%       30.010    40.0300
-## 25%      47.395    54.3175
-## 50%      65.020    69.6800
-## 75%      83.240    85.1825
-## 100%     99.950    99.9900
+##      tahun pdrb_perkapita kemiskinan pengangguran   ipm harapan_hidup rata_lama_sekolah
+## 0%    2020       15031581     2.0100         1.01 55.01       60.0100            5.0200
+## 25%   2021       69622210     7.8600         4.35 62.52       64.6575            7.3275
+## 50%   2022      137310624    13.7200         8.23 69.89       69.2950            9.5200
+## 75%   2023      193899157    19.3925        11.52 77.16       73.5850           11.9125
+## 100%  2024     1774545027    67.5300        47.04 84.99       77.9900           14.0000
+##      akses_internet jalan_baik air_bersih
+## 0%            0.010     30.010    40.0300
+## 25%          38.915     47.395    54.3175
+## 50%          58.090     65.020    69.6800
+## 75%          78.670     83.240    85.1825
+## 100%         97.990     99.950    99.9900
 \end{verbatim}
 
 \begin{verbatim}
@@ -1597,8 +1464,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1662,8 +1528,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1727,8 +1592,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1792,8 +1656,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1857,8 +1720,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1922,8 +1784,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -1987,8 +1848,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -2052,8 +1912,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -2117,8 +1976,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -2182,8 +2040,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ## Jumlah Outlier : 5 
 ## 
 ## Nilai Outlier:
-## [1] 1472419961 1474832345 1774545027
-## [4] 1087231959 1012449971
+## [1] 1472419961 1474832345 1774545027 1087231959 1012449971
 ## 
 ## Rata-rata Outlier : 1364295853 
 ## Mean Sebelum : 135736399 
@@ -2312,77 +2169,33 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 \end{verbatim}
 
 \begin{verbatim}
-##         Variabel      P_Value
-## 1            IPM 2.379285e-25
-## 2     Kemiskinan 2.377348e-29
-## 3 Akses Internet 6.137887e-26
-##                   Kesimpulan
-## 1 Tidak Berdistribusi Normal
-## 2 Tidak Berdistribusi Normal
-## 3 Tidak Berdistribusi Normal
+##         Variabel      P_Value                 Kesimpulan
+## 1            IPM 2.379285e-25 Tidak Berdistribusi Normal
+## 2     Kemiskinan 2.377348e-29 Tidak Berdistribusi Normal
+## 3 Akses Internet 6.137887e-26 Tidak Berdistribusi Normal
 \end{verbatim}
 
 \begin{verbatim}
-##                   pdrb_perkapita kemiskinan
-## pdrb_perkapita             1.000     -0.002
-## kemiskinan                -0.002      1.000
-## pengangguran              -0.028     -0.011
-## ipm                        0.009      0.019
-## harapan_hidup              0.011     -0.009
-## rata_lama_sekolah         -0.002      0.010
-## akses_internet            -0.008     -0.032
-## jalan_baik                 0.040      0.020
-## air_bersih                -0.005      0.009
-##                   pengangguran    ipm
-## pdrb_perkapita          -0.028  0.009
-## kemiskinan              -0.011  0.019
-## pengangguran             1.000  0.001
-## ipm                      0.001  1.000
-## harapan_hidup            0.004  0.020
-## rata_lama_sekolah        0.008  0.018
-## akses_internet           0.027 -0.001
-## jalan_baik              -0.005  0.025
-## air_bersih               0.008  0.025
-##                   harapan_hidup
-## pdrb_perkapita            0.011
-## kemiskinan               -0.009
-## pengangguran              0.004
-## ipm                       0.020
-## harapan_hidup             1.000
-## rata_lama_sekolah        -0.013
-## akses_internet            0.004
-## jalan_baik                0.000
-## air_bersih               -0.025
-##                   rata_lama_sekolah
-## pdrb_perkapita               -0.002
-## kemiskinan                    0.010
-## pengangguran                  0.008
-## ipm                           0.018
-## harapan_hidup                -0.013
-## rata_lama_sekolah             1.000
-## akses_internet               -0.014
-## jalan_baik                    0.052
-## air_bersih                    0.019
-##                   akses_internet jalan_baik
-## pdrb_perkapita            -0.008      0.040
-## kemiskinan                -0.032      0.020
-## pengangguran               0.027     -0.005
-## ipm                       -0.001      0.025
-## harapan_hidup              0.004      0.000
-## rata_lama_sekolah         -0.014      0.052
-## akses_internet             1.000     -0.004
-## jalan_baik                -0.004      1.000
-## air_bersih                -0.007      0.022
-##                   air_bersih
-## pdrb_perkapita        -0.005
-## kemiskinan             0.009
-## pengangguran           0.008
-## ipm                    0.025
-## harapan_hidup         -0.025
-## rata_lama_sekolah      0.019
-## akses_internet        -0.007
-## jalan_baik             0.022
-## air_bersih             1.000
+##                   pdrb_perkapita kemiskinan pengangguran    ipm harapan_hidup rata_lama_sekolah
+## pdrb_perkapita             1.000     -0.002       -0.028  0.009         0.011            -0.002
+## kemiskinan                -0.002      1.000       -0.011  0.019        -0.009             0.010
+## pengangguran              -0.028     -0.011        1.000  0.001         0.004             0.008
+## ipm                        0.009      0.019        0.001  1.000         0.020             0.018
+## harapan_hidup              0.011     -0.009        0.004  0.020         1.000            -0.013
+## rata_lama_sekolah         -0.002      0.010        0.008  0.018        -0.013             1.000
+## akses_internet            -0.008     -0.032        0.027 -0.001         0.004            -0.014
+## jalan_baik                 0.040      0.020       -0.005  0.025         0.000             0.052
+## air_bersih                -0.005      0.009        0.008  0.025        -0.025             0.019
+##                   akses_internet jalan_baik air_bersih
+## pdrb_perkapita            -0.008      0.040     -0.005
+## kemiskinan                -0.032      0.020      0.009
+## pengangguran               0.027     -0.005      0.008
+## ipm                       -0.001      0.025      0.025
+## harapan_hidup              0.004      0.000     -0.025
+## rata_lama_sekolah         -0.014      0.052      0.019
+## akses_internet             1.000     -0.004     -0.007
+## jalan_baik                -0.004      1.000      0.022
+## air_bersih                -0.007      0.022      1.000
 \end{verbatim}
 
 \begin{verbatim}
@@ -2404,8 +2217,7 @@ Tambahan}{5.2  Output Tambahan}}\label{output-tambahan}
 ##  Pearson's product-moment correlation
 ## 
 ## data:  data_bersih$akses_internet and data_bersih$rata_lama_sekolah
-## t = -0.68127, df = 2355, p-value =
-## 0.4958
+## t = -0.68127, df = 2355, p-value = 0.4958
 ## alternative hypothesis: true correlation is not equal to 0
 ## 95 percent confidence interval:
 ##  -0.05438095  0.02635246
