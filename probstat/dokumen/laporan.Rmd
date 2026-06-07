@@ -156,12 +156,20 @@ Muhamad Akbar Zainuri & J0403251008\\
 
   Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
   
-  1. **Dataset format .csv**: Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
+  1. **Dataset format .csv:** Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
   2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
   3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
   4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
 
 ## \normalsize 2.3  \hspace {0,5cm} Metode Analisis
+  Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambaran mengenai kondisi pembangunan wilayah di Indonesia. Tahapan analisis yang dilakukan adalah sebagai berikut:
+
+  1. **Pengumpulan Data:** Data yang digunakan merupakan data indikator pembangunan wilayah yang mencakup beberapa variabel pdrb\_perkapita, kemiskinan, pengangguran, IPM, akses\_internet, dll).
+  2. **Analisis Statistik Deskriptif:** Analisis statistik deskriptif dilakukan untuk menggambarkan karakteristik data melalui nilai minimum, nilai maksimum, rata-rata, median, standar deviasi, dan lain-lain.
+  3. **Analisis Missing Value:** Missing value dianalisis dengan menghitung jumlah dan persentase data yang hilang pada seiap variabel. Hasil analisis digunakan untuk menentukan metode penanganan yang sesuai.
+  4. **Analisis Outliers:** Deteksi outlier dilakukan menggunakan metode Interquartile Range (IQR). Suatu data dikatakan sebagai outlier apabila berada di luar batas.
+  5. **Visualisasi Data:** Visualisasi dilakukan untuk mempermudah interpretasi data menggunakan histogram, boxplot, scatter plot, dan heatmap korelasi.
+  6. **Analisis Korelasi:** Analisis korelasi digunakan untuk mengetahui hubungan antar indikator pembangunan wilayah. Kolerasi dihitung menggunakan koefisien korelasi pearson dengan rentang nilai −1 ≤ r ≤ 1. Nilai korelasi yang mendekati 1 menunjukkan hubungan positif yang kuat, sedangkan nilai yang mendekati -1 menunjukkan hubungan negatif yang kuat.
 
 \setcounter{page}{2}
 <!-- =================================================================== -->
@@ -272,17 +280,22 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 \begin{center}
   \textbf{Tabel 3.3 Hasil Analisis \textit{Outliers}}
   
-  \begin{tabular}{|c|c|c|}
+  \begin{tabular}{|c|c|}
   \hline
-  \textbf{Variabel} & \textbf{Jumlah Outliers} & \textbf{Visualisasi} \\
+  \textbf{Variabel} & \textbf{Jumlah Outliers} \\
   \hline
-  pdrb\_perkapita & 5 & apa \\
+  pdrb\_perkapita & 5 \\
   \hline
-  kemiskinan & 5 & apa \\
+  kemiskinan & 5 \\
   \hline
-  pengangguran & 5 & apa \\
+  pengangguran & 5 \\
   \hline
   \end{tabular}
+\end{center}
+
+\begin{center}
+  \textbf{Gambar 3.1 Boxplot Outlier}
+  \includegraphics[width=15cm]{../gambar/boxplot_outlier.png}
 \end{center}
 
 \begin{center}
@@ -507,26 +520,76 @@ print(nrow(data_pembangunan))
 ("--- Mengambil kolom variabel yang bertipe data numerik ---")
 numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
 
+outlier_columns <- c()
+
 ("--- Menghitung IQR tiap kolom numerik ---")
 for(column_name in numeric_columns_name) {
-  Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
-  Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
+  ("--- Mengambil kolom variabel yang bertipe data numerik ---")
+  numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
   
-  IQR <- Q3 - Q1
+  outlier_columns <- c()
   
-  lower_bound <- Q1 - 1.5 * IQR
-  upper_bound <- Q3 + 1.5 * IQR
+  ("--- Menghitung IQR tiap kolom numerik ---")
+  for(column_name in numeric_columns_name) {
   
-  total_outlier <- sum(data_pembangunan[[column_name]] < lower_bound | data_pembangunan[[column_name]] > upper_bound, na.rm = TRUE)
+    Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
+    Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
   
-  cat(column_name, ":", total_outlier, "outlier\n")
+    IQR <- Q3 - Q1
+  
+    lower_bound <- Q1 - 1.5 * IQR
+    upper_bound <- Q3 + 1.5 * IQR
+  
+    outlier_values <- data_pembangunan[[column_name]][
+      data_pembangunan[[column_name]] < lower_bound |
+      data_pembangunan[[column_name]] > upper_bound
+    ]
+  
+    total_outlier <- length(outlier_values)
+  
+    cat("\n====================================\n")
+    cat("Variabel :", column_name, "\n")
+    cat("Jumlah Outlier :", total_outlier, "\n")
+  
+    if(total_outlier > 0) {
+  
+      outlier_columns <- c(outlier_columns, column_name)
+  
+      cat("\nNilai Outlier:\n")
+      print(outlier_values)
+  
+      mean_sebelum <- mean(
+        data_pembangunan[[column_name]],
+        na.rm = TRUE
+      )
+  
+      data_tanpa_outlier <- data_pembangunan[[column_name]][
+        data_pembangunan[[column_name]] >= lower_bound &
+        data_pembangunan[[column_name]] <= upper_bound
+      ]
+  
+      mean_setelah <- mean(
+        data_tanpa_outlier,
+        na.rm = TRUE
+      )
+  
+      cat("\nRata-rata Outlier :", mean(outlier_values), "\n")
+      cat("Mean Sebelum :", mean_sebelum, "\n")
+      cat("Mean Setelah :", mean_setelah, "\n")
+      cat("Selisih Mean :", abs(mean_sebelum - mean_setelah), "\n")
+    }
+  }
 }
 
-("--- Membuat beberapa boxplot untuk visualisasi outlier ---")
-par(mfrow = c(2, 3))
+("--- Membuat boxplot hanya untuk variabel yang memiliki outlier ---")
+par(mfrow = c(1, length(outlier_columns)))
 
-for(col in numeric_columns_name) {
-  boxplot(data_pembangunan[[col]], main = col)
+for(col in outlier_columns) {
+  boxplot(
+    data_pembangunan[[col]],
+    main = col,
+    ylab = col
+  )
 }
 
 # Bagian : 1.3.5 Visualisasi Data
@@ -824,28 +887,79 @@ print(nrow(data_pembangunan))
 # 1.3.4 Analisis Outlier
 # ======================
 
+("--- Mengambil kolom variabel yang bertipe data numerik ---")
 numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
+
+outlier_columns <- c()
 
 ("--- Menghitung IQR tiap kolom numerik ---")
 for(column_name in numeric_columns_name) {
-  Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
-  Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
+  ("--- Mengambil kolom variabel yang bertipe data numerik ---")
+  numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
   
-  IQR <- Q3 - Q1
+  outlier_columns <- c()
   
-  lower_bound <- Q1 - 1.5 * IQR
-  upper_bound <- Q3 + 1.5 * IQR
+  ("--- Menghitung IQR tiap kolom numerik ---")
+  for(column_name in numeric_columns_name) {
   
-  total_outlier <- sum(data_pembangunan[[column_name]] < lower_bound | data_pembangunan[[column_name]] > upper_bound, na.rm = TRUE)
+    Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
+    Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
   
-  cat(column_name, ":", total_outlier, "outlier\n")
+    IQR <- Q3 - Q1
+  
+    lower_bound <- Q1 - 1.5 * IQR
+    upper_bound <- Q3 + 1.5 * IQR
+  
+    outlier_values <- data_pembangunan[[column_name]][
+      data_pembangunan[[column_name]] < lower_bound |
+      data_pembangunan[[column_name]] > upper_bound
+    ]
+  
+    total_outlier <- length(outlier_values)
+  
+    cat("\n====================================\n")
+    cat("Variabel :", column_name, "\n")
+    cat("Jumlah Outlier :", total_outlier, "\n")
+  
+    if(total_outlier > 0) {
+  
+      outlier_columns <- c(outlier_columns, column_name)
+  
+      cat("\nNilai Outlier:\n")
+      print(outlier_values)
+  
+      mean_sebelum <- mean(
+        data_pembangunan[[column_name]],
+        na.rm = TRUE
+      )
+  
+      data_tanpa_outlier <- data_pembangunan[[column_name]][
+        data_pembangunan[[column_name]] >= lower_bound &
+        data_pembangunan[[column_name]] <= upper_bound
+      ]
+  
+      mean_setelah <- mean(
+        data_tanpa_outlier,
+        na.rm = TRUE
+      )
+  
+      cat("\nRata-rata Outlier :", mean(outlier_values), "\n")
+      cat("Mean Sebelum :", mean_sebelum, "\n")
+      cat("Mean Setelah :", mean_setelah, "\n")
+      cat("Selisih Mean :", abs(mean_sebelum - mean_setelah), "\n")
+    }
+  }
 }
 
+("--- Membuat boxplot hanya untuk variabel yang memiliki outlier ---")
+par(mfrow = c(1, length(outlier_columns)))
 
-par(mfrow = c(2, 3))
-
-for(col in numeric_columns_name) {
-  boxplot(data_pembangunan[[col]], main = col)
+for(col in outlier_columns) {
+  boxplot(
+    data_pembangunan[[col]],
+    main = col,
+    ylab = col
+  )
 }
 
 # Bagian : 1.3.5 Visualisasi Data

@@ -72,28 +72,77 @@ print(nrow(data_pembangunan))
 ("--- Mengambil kolom variabel yang bertipe data numerik ---")
 numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
 
+outlier_columns <- c()
+
 ("--- Menghitung IQR tiap kolom numerik ---")
 for(column_name in numeric_columns_name) {
-  Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
-  Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
+  ("--- Mengambil kolom variabel yang bertipe data numerik ---")
+  numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
   
-  IQR <- Q3 - Q1
+  outlier_columns <- c()
   
-  lower_bound <- Q1 - 1.5 * IQR
-  upper_bound <- Q3 + 1.5 * IQR
+  ("--- Menghitung IQR tiap kolom numerik ---")
+  for(column_name in numeric_columns_name) {
   
-  total_outlier <- sum(data_pembangunan[[column_name]] < lower_bound | data_pembangunan[[column_name]] > upper_bound, na.rm = TRUE)
+    Q1 <- quantile(data_pembangunan[[column_name]], 0.25, na.rm = TRUE)
+    Q3 <- quantile(data_pembangunan[[column_name]], 0.75, na.rm = TRUE)
   
-  cat(column_name, ":", total_outlier, "outlier\n")
+    IQR <- Q3 - Q1
+  
+    lower_bound <- Q1 - 1.5 * IQR
+    upper_bound <- Q3 + 1.5 * IQR
+  
+    outlier_values <- data_pembangunan[[column_name]][
+      data_pembangunan[[column_name]] < lower_bound |
+      data_pembangunan[[column_name]] > upper_bound
+    ]
+  
+    total_outlier <- length(outlier_values)
+  
+    cat("\n====================================\n")
+    cat("Variabel :", column_name, "\n")
+    cat("Jumlah Outlier :", total_outlier, "\n")
+  
+    if(total_outlier > 0) {
+  
+      outlier_columns <- c(outlier_columns, column_name)
+  
+      cat("\nNilai Outlier:\n")
+      print(outlier_values)
+  
+      mean_sebelum <- mean(
+        data_pembangunan[[column_name]],
+        na.rm = TRUE
+      )
+  
+      data_tanpa_outlier <- data_pembangunan[[column_name]][
+        data_pembangunan[[column_name]] >= lower_bound &
+        data_pembangunan[[column_name]] <= upper_bound
+      ]
+  
+      mean_setelah <- mean(
+        data_tanpa_outlier,
+        na.rm = TRUE
+      )
+  
+      cat("\nRata-rata Outlier :", mean(outlier_values), "\n")
+      cat("Mean Sebelum :", mean_sebelum, "\n")
+      cat("Mean Setelah :", mean_setelah, "\n")
+      cat("Selisih Mean :", abs(mean_sebelum - mean_setelah), "\n")
+    }
+  }
 }
 
-("--- Membuat beberapa boxplot untuk visualisasi outlier ---")
-par(mfrow = c(2, 3))
+("--- Membuat boxplot hanya untuk variabel yang memiliki outlier ---")
+par(mfrow = c(1, length(outlier_columns)))
 
-for(col in numeric_columns_name) {
-  boxplot(data_pembangunan[[col]], main = col)
+for(col in outlier_columns) {
+  boxplot(
+    data_pembangunan[[col]],
+    main = col,
+    ylab = col
+  )
 }
-
 
 # ============================
 # 1.3.7 Analisis Korelasi
