@@ -269,6 +269,36 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 
 ## \normalsize 3.6  \hspace {0,5cm} Korelasi
 
+Analisis korelasi merupakan metode statistik yang digunakan untuk mengetahui hubungan antar variabel dalam suatu dataset. Pada penelitian ini, analisis korelasi dilakukan menggunakan metode \textit{Pearson} untuk mengukur kekuatan serta arah hubungan linear antar variabel pembangunan wilayah.
+
+Variabel yang dianalisis meliputi \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{ipm}, \textit{harapan\_hidup}, \textit{rata\_lama\_sekolah}, dan \textit{akses\_internet}. Hasil analisis korelasi ditampilkan dalam bentuk ringkasan berikut.
+
+\begin{center}
+  \textbf{Tabel 3.6 Hasil Analisis Korelasi}
+  
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Variabel 1} & \textbf{Variabel 2} & \textbf{Nilai Korelasi} & \textbf{Keterangan} \\
+  \hline
+  pdrb\_perkapita & kemiskinan & -0,0048 & Sangat lemah (negatif) \\
+  \hline
+  pengangguran & pdrb\_perkapita & -0,0323 & Sangat lemah (negatif) \\
+  \hline
+  ipm & pdrb\_perkapita & 0,0111 & Sangat lemah (positif) \\
+  \hline
+  harapan\_hidup & pdrb\_perkapita & 0,0125 & Sangat lemah (positif) \\
+  \hline
+  akses\_internet & kemiskinan & -0,0309 & Sangat lemah (negatif) \\
+  \hline
+  akses\_internet & ipm & 0,0020 & Sangat lemah (positif) \\
+  \hline
+  \end{tabular}
+\end{center}
+
+Berdasarkan hasil analisis, seluruh nilai korelasi berada sangat dekat dengan nol, yaitu dalam rentang sekitar -0,03 hingga 0,01. Hal ini menunjukkan bahwa hubungan linear antar variabel dalam dataset pembangunan wilayah sangat lemah.
+
+Tidak adanya korelasi yang kuat mengindikasikan bahwa variabel-variabel tersebut tidak memiliki hubungan linear yang signifikan dan kemungkinan dipengaruhi oleh faktor lain di luar model yang digunakan.
+
 ## \normalsize 3.7  \hspace {0,5cm} Interpretasi
 
 \setcounter{page}{3}
