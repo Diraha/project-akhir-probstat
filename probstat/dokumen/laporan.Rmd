@@ -128,7 +128,27 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## \normalsize 2.1  \hspace {0,5cm} Dataset
 
+  Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
+  
+  Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang telah dikelompokkan menjadi beberapa kategori:
+  
+  1. Variabel Identitas Data      : wilayah, provinsi, dan tahun.
+  2. Variabel Ekonomi             : pdrb_perkapita, kemiskinan, dan pengangguran.
+  3. Variabel Pembangunan Manusia : ipm, harapan_hidup, rata_lama_sekolah.
+  4. Variabel Infrastruktur       : akses_internet, jalan_baik, air_bersih.
+  5. Variabel Metadata            : catatan_data.
+  
+  Dataset pembangunan wilayah tersebut berbentuk dokumen .csv. Dokumen ini bisa diunduh melalui https://pembangunanwilayahmissingoutlier.tiiny.site untuk melihat dataset secara keseluruhan.
+  
+
 ## \normalsize 2.2  \hspace {0,5cm} Tools Yang Digunakan
+
+  Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
+  
+  1. **Dataset format .csv**: Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
+  2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
+  3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
+  4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
 
 ## \normalsize 2.3  \hspace {0,5cm} Metode Analisis
 
@@ -300,3 +320,6 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 <!-- =================================================================== -->
 <!-- =================================================================== -->
 <!-- =================================================================== -->
+
+
+
