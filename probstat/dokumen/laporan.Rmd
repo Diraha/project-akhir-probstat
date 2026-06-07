@@ -349,7 +349,7 @@ Beberapa jenis visualisasi yang digunakan meliputi histogram, boxplot, dan scatt
 \begin{center}
 \textbf{Gambar 3.2 Histogram Nilai IPM}
 
-\includegraphics[width=12cm]{..../gambar/histogramIPM.png}
+\includegraphics[width=12cm]{../gambar/histogramIPM.png}
 \end{center}
 
 Berdasarkan histogram nilai IPM, sebagian besar data terkonsentrasi pada rentang nilai menengah hingga tinggi. Hal ini menunjukkan bahwa mayoritas kabupaten/kota di Indonesia memiliki tingkat pembangunan manusia yang relatif baik. Distribusi data juga terlihat cukup terpusat dengan penyebaran yang tidak terlalu ekstrem.
