@@ -225,9 +225,7 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
   Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat outlier pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai missing value dan outlier perlu dilakukan pada tahap berikutnya.
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
-  \textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam data set tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
-  
-  Salah satu metode penanganan \textit{missing value} adalah dengan menghapus data. Metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
+  \textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
   
   Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \textit{missing value} dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
 
@@ -258,10 +256,76 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 
 \end{center}
 
-
-  Berdasarkan hasil analisis, penanganan \textit{missing value} dilakukan dengan metode penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
+  Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}. Keberadaan \textit{missing value} ini dapat mempengaruhi hasil analisis statistik, salah satu contohnya adalah mengurangi jumlah observasi yang dapat di analisis.
+  
+  Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berbagai metode statistik. Akibatnya, jumlah data yang tersedia untuk analisis menjadi berkurang sehingga informasi yang diperoleh menjadi kurang lengkap.
+  
+  Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
+  
+  Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
+  \textit{Outliers} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outliers} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outliers} menjadi langkah penting yang harus dilakukan.
+  
+  Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah variabel, yaitu \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran}. Berikut penjabaran seberapa banyak outliers yang dimiliki setiap variebal tersebut.
+  
+\begin{center}
+  \textbf{Tabel 3.3 Hasil Analisis \textit{Outliers}}
+  
+  \begin{tabular}{|c|c|c|}
+  \hline
+  \textbf{Variabel} & \textbf{Jumlah Outliers} & \textbf{Visualisasi} \\
+  \hline
+  pdrb\_perkapita & 5 & apa \\
+  \hline
+  kemiskinan & 5 & apa \\
+  \hline
+  pengangguran & 5 & apa \\
+  \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \textbf{Tabel 3.4 Nilai-Nilai \textit{Outliers} yang Terdeteksi}
+  
+  \begin{tabular}{|c|c|c|}
+  \hline
+  \textbf{pdrb\_perkapita} & \textbf{kemiskinan} & \textbf{pengangguran} \\
+  \hline
+  1.012.449.971 & 45,95 & 33,19 \\
+  \hline
+  1.087.231.959 & 47,69 & 34,90 \\
+  \hline
+  1.472.419.961 & 53,50 & 36,68 \\
+  \hline
+  1.474.832.345 & 58,41 & 36,74 \\
+  \hline
+  1.774.545.027 & 67,53 & 47,04 \\
+  \hline
+  \end{tabular}
+\end{center}
+
+  Dalam analisis ini, metode deteksi \textit{outliers} yang kami gunakan adalah \textbf{IQR}. Metode ini mengidentifikasi \textit{outliers} dengan menghitung rentang antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Nilai yang berada diluar rentang [Q1 - 1.5 x IQR, Q3 + 1.5 x IQR] dianggap sebagai \textit{outliers}.
+  
+  Nilai \textit{outliers} juga memiliki dampak besar terhadap analisis statistik, salah satu contohnya adalah, \textit{outliers} dapat menarik ukuran pemusatan data ke arah nilai ekstrem. Berikut tabel dampak nilai \textit{outliers} yang sudah di analisis.
+  
+\begin{center}
+  \textbf{Tabel 3.5 Dampak \textit{Outliers} terhadap Nilai Rata-Rata}
+  
+  \begin{tabular}{|c|c|c|c|}
+  \hline
+  \textbf{Variabel} & \textbf{Mean Sebelum Penghapusan} & \textbf{Mean Setelah Penghapusan} & \textbf{Selisih} \\
+  \hline
+  pdrb\_perkapita & 135.650.462 & 133.163.326 & 2.487.136 \\
+  \hline
+  kemiskinan & 13.72 & 13.64 & 0.08 \\
+  \hline
+  pengangguran & 8.05 & 7.99 & 0.06 \\
+  \hline
+  \end{tabular}
+\end{center}
+
+  Variabel \textit{pdrb\_perkapita} mengalami perubahan rata-rata terbesar setelah \textit{outlier} dihapus, yaitu sebesar 2.487.136. Ini menunjukkan bahwa keberadaan beberapa daerah dengan nilai \textit{pdrb\_perkapita} yang sangat tinggi memberikan pengaruh yang cukup besar terhadap nilai rata-rata keseluruhan. Sementara itu, variabel kemiskinan dan pengangguran hanya mengalami perubahan rata-rata yang relatif kecil, sehingga pengaruh \textit{outlier} terhadap kedua variabel tersebut tidak sebesar pada variabel \textit{pdrb\_perkapita}.
 
 ## \normalsize 3.4  \hspace {0,5cm} Visualisasi
 
