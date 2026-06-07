@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.8)  8 JUN 2026 01:18
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.6.8)  8 JUN 2026 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1062,20 +1062,20 @@ File: ../gambar/boxplot_outlier.png Graphic file (type bmp)
 <../gambar/boxplot_outlier.png>
 [6]
 
-LaTeX Warning: File `../gambar/histogram_ipm.png' not found on input line 615.
+LaTeX Warning: File `..../gambar/histogramIPM.png' not found on input line 615.
 
-! Unable to load picture or PDF file '../gambar/histogram_ipm.png'.
+! Unable to load picture or PDF file '..../gambar/histogramIPM.png'.
 <to be read again> 
                    }
-l.615 ...[width=12cm]{../gambar/histogram_ipm.png}
+l.615 ...width=12cm]{..../gambar/histogramIPM.png}
                                                   
 The requested image couldn't be read because
 it was not a recognized image format.
 
  
 Here is how much of TeX's memory you used:
- 18437 strings out of 469836
- 345034 string characters out of 5468049
+ 18438 strings out of 469836
+ 345093 string characters out of 5468049
  904310 words of memory out of 5000000
  47166 multiletter control sequences out of 15000+600000
  631326 words of font info for 82 fonts, out of 8000000 for 9000
