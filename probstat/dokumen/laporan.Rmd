@@ -27,46 +27,57 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- =                           COVER PAGE                            = -->
 <!-- =================================================================== -->
 \begin{center}
-  {
-    \bfseries
-    \Large 
-    
-    ANALISIS DATA PEMBANGUNAN WILAYAH MENGGUNAKAN R
 
-    \vspace{3cm}
+\vspace*{1cm}
 
-    {
-      \large Disusun Oleh:
-    }
+{\Large \textbf{ANALISIS DATA PEMBANGUNAN WILAYAH}}
 
-    \vspace{0.7cm}
+\vspace{0.3cm}
 
-    \begin{tabular}{ll}
-    Diaz Ramaananta Harahap      & J0403251048 \\
-    Nashira Salima Firmansyah    & J0403251056 \\
-    Dede Risma Komalasari        & J0403251049 \\
-    Zalfa Nazla Azkiya           & J0403251037 \\
-    Fahrizal Azis                & J0403251151 \\
-    Muhamad Akbar Zainuri        & J0403251008 \\
-    \end{tabular}
+{\Large \textbf{MENGGUNAKAN R}}
 
-    \vspace*{3cm}
+\vspace{2cm}
 
-  
-    \vfill
+\textbf{Disusun Oleh:}
 
-    MATA KULIAH PROBABILITAS \& STATISTIKA
+\vspace{0.8cm}
 
-    PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK
+\begin{tabular}{p{8cm}p{3cm}}
+Diaz Ramaananta Harahap & J0403251048\\
+Nashira Salima Firmansyah & J0403251056\\
+Dede Risma Komalasari & J0403251049\\
+Zalfa Nazla Azkiya & J0403251037\\
+Fahrizal Azis & J0403251151\\
+Muhamad Akbar Zainuri & J0403251008\\
+\end{tabular}
 
-    SEKOLAH VOKASI
+\vspace{1.2cm}
 
-    INSITUT PERTANIAN BOGOR
+\includegraphics[width=3.5cm]{../gambar/Logo_IPB.png}
 
-    2026
+\vspace{1.5cm}
 
-  }
+\textbf{MATA KULIAH PROBABILITAS \& STATISTIKA}
+
+\vspace{0.3cm}
+
+\textbf{PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK}
+
+\vspace{0.3cm}
+
+\textbf{SEKOLAH VOKASI}
+
+\vspace{0.3cm}
+
+\textbf{INSTITUT PERTANIAN BOGOR}
+
+\vspace{1.5cm}
+
+\textbf{2026}
+
 \end{center}
+
+\newpage
 
 \thispagestyle{empty}
 <!-- =================================================================== -->
@@ -285,10 +296,24 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 \end{center}
 
 ## \normalsize 4.1  \hspace {0,5cm} Kesimpulan Utama
+Berdasarkan hasil analisis data pembangunan wilayah menggunakan bahasa pemrograman R, dapat disimpulkan bahwa dataset memiliki kualitas yang baik dengan tingkat *missing value* yang sangat rendah, yaitu sekitar 0,45% dari keseluruhan data. Penanganan *missing value* dilakukan dengan metode penghapusan karena proporsinya relatif kecil dan tidak memengaruhi representativitas data secara signifikan.
+
+Analisis statistika deskriptif menunjukkan bahwa variabel ekonomi memiliki tingkat variasi yang lebih tinggi dibandingkan variabel pembangunan manusia. Selain itu, analisis *outlier* menunjukkan adanya beberapa data ekstrem pada variabel PDRB per kapita, kemiskinan, dan pengangguran.
+
+Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan dalam dataset cenderung lemah dan tidak signifikan secara statistik. Dengan demikian, pembangunan wilayah merupakan fenomena yang kompleks dan dipengaruhi oleh berbagai faktor yang saling berkaitan.
+
 
 ## \normalsize 4.2  \hspace {0,5cm} Insight
+1. Ketimpangan ekonomi antar wilayah masih terlihat dari adanya outlier pada variabel PDRB per kapita.
+2. Variabel pembangunan manusia seperti IPM, harapan hidup, dan rata-rata lama sekolah memiliki distribusi yang relatif stabil.
+3. Hubungan antar indikator pembangunan pada dataset tidak menunjukkan pola linear yang kuat.
+4. Analisis pembangunan wilayah memerlukan pendekatan multivariat karena satu indikator tidak cukup menjelaskan kondisi pembangunan secara keseluruhan.
 
 ## \normalsize 4.3  \hspace {0,5cm} Saran
+1. Menambahkan variabel lain seperti investasi daerah, tingkat urbanisasi, dan pengeluaran pemerintah agar analisis lebih komprehensif.
+2. Melakukan analisis regresi atau machine learning untuk mengidentifikasi faktor yang paling berpengaruh terhadap pembangunan wilayah.
+3. Melakukan visualisasi yang lebih mendalam menggunakan histogram, scatter plot, dan heatmap korelasi.
+4. Memperbarui dataset secara berkala agar hasil analisis dapat mencerminkan kondisi pembangunan yang lebih aktual.
 
 \setcounter{page}{4}
 <!-- =================================================================== -->
