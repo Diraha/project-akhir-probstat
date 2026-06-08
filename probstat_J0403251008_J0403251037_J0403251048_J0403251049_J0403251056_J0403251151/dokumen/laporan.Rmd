@@ -5,6 +5,9 @@ output:
   pdf_document:
     latex_engine: xelatex
 
+bibliography: referensi.bib
+csl: ipb.csl
+
 fontsize: 12pt
 
 geometry:
@@ -250,7 +253,7 @@ Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Ind
 
 ## \normalsize 2.1  \hspace {0,5cm} Dataset
 \vspace{-0.5cm}
-Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
+Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya [@james2021]. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
   
 Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang telah dikelompokkan menjadi beberapa kategori:
 
@@ -268,9 +271,9 @@ Dataset pembangunan wilayah tersebut berbentuk dokumen .csv. Dokumen ini bisa di
 Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
 
   1. **Dataset format .csv:** Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
-  2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
-  3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
-  4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
+  2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data [@james2021]. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
+  3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R [@rstudio2024]. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
+  4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data dan pembuatan grafik statistik [@wickham2016]. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
   5. **Library xelatex:**Xelatex digunakan sebagai library untuk mengekspor laporan akhir proyek dari dokumen RMarkdown menjadi dokumen berformat .pdf. 
 
 ## \normalsize 2.3  \hspace {0,5cm} Metode Analisis
@@ -308,7 +311,7 @@ Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambar
 
 ## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
 \vspace{-0.5cm}
-Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
+Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik [@walpole2018]. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah melalui ukuran pemusatan dan penyebaran data [@walpole2018]. khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
 
 Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh variabel numerik pada dataset pembangunan wilayah menggunakan beberapa fungsi dalam bahasa pemrograman R seperti \textit{summary()}, \textit{mean()}, \textit{median()}, \textit{sd()}, \textit{var()}, dan \textit{quantile()}.
 
@@ -388,7 +391,8 @@ Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \text
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
 \vspace{-0.5cm}
-Menurut Rianto & Santosa (2024), \textit{Outlier} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outlier} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outlier} menjadi langkah penting yang harus dilakukan.
+Outlier merupakan data yang memiliki nilai jauh berbeda dibandingkan sebagian besar observasi lainnya. Pada penelitian ini, deteksi outlier dilakukan menggunakan metode Interquartile Range (IQR) dengan batas bawah Q1 − 1.5 × IQR dan batas atas Q3 + 1.5 × IQR [@montgomery2018].
+\textit{Outlier} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outlier} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outlier} menjadi langkah penting yang harus dilakukan.
   
 Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah variabel, yaitu \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran}. Berikut penjabaran seberapa banyak outlier yang dimiliki setiap variebal tersebut.
 
@@ -515,7 +519,7 @@ Secara keseluruhan, visualisasi data memberikan gambaran yang lebih jelas mengen
 
 ## \normalsize 3.5  \hspace {0,5cm} Distribusi Data
 \vspace{-0.5cm}
-Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap beberapa variabel, yaitu \textit{ipm}, \textit{kemiskinan}, dan \textit{akses\_internet}. Selain itu, distribusi data juga diamati menggunakan QQ Plot untuk membandingkan distribusi data aktual dengan distribusi normal teoritis.
+Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap beberapa variabel, yaitu \textit{ipm}, \textit{kemiskinan}, dan \textit{akses\_internet}. Uji normalitas Shapiro-Wilk digunakan untuk mengetahui apakah suatu variabel mengikuti distribusi normal atau tidak. Suatu data dianggap berdistribusi normal apabila nilai p-value lebih besar dari 0,05 [@montgomery2018]. Selain itu, distribusi data juga diamati menggunakan QQ Plot untuk membandingkan distribusi data aktual dengan distribusi normal teoritis.
 
 \begin{center}
 \vspace{1cm}
@@ -563,6 +567,7 @@ Secara umum, hasil uji normalitas, QQ Plot, dan analisis probabilitas menunjukka
 
 ## \normalsize 3.6  \hspace {0,5cm} Korelasi
 \vspace{-0.5cm}
+Analisis korelasi Pearson digunakan untuk mengukur kekuatan dan arah hubungan linear antara dua variabel numerik [@walpole2018, @hair2019].
 Analisis korelasi merupakan metode statistik yang digunakan untuk mengetahui hubungan antar variabel dalam suatu dataset. Pada penelitian ini, analisis korelasi dilakukan menggunakan metode \textit{Pearson} untuk mengukur kekuatan serta arah hubungan linear antar variabel pembangunan wilayah.
 
 Variabel yang dianalisis meliputi \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{ipm}, \textit{harapan\_hidup}, \textit{rata\_lama\_sekolah}, dan \textit{akses\_internet}. Hasil analisis korelasi ditampilkan dalam bentuk ringkasan berikut.
@@ -655,6 +660,22 @@ Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan d
 2. Melakukan analisis regresi atau machine learning untuk mengidentifikasi faktor yang paling berpengaruh terhadap pembangunan wilayah.
 3. Melakukan visualisasi yang lebih mendalam menggunakan histogram, scatter plot, dan heatmap korelasi.
 4. Memperbarui dataset secara berkala agar hasil analisis dapat mencerminkan kondisi pembangunan yang lebih aktual.
+
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+<!-- =================================================================== -->
+<!-- =                         DAFTAR PUSTAKA                          = -->
+<!-- =================================================================== -->
+\begin{center}
+{\bfseries\Large DAFTAR PUSTAKA}
+\end{center}
+
+::: {#refs}
+:::
 
 <!-- =================================================================== -->
 <!-- =================================================================== -->
@@ -1424,22 +1445,3 @@ print(uji_pdrb_ipm)
 <!-- =================================================================== -->
 <!-- =================================================================== -->
 <!-- =================================================================== -->
-
-\newpage
-
-<!-- =================================================================== -->
-<!-- =                         DAFTAR PUSTAKA                          = -->
-<!-- =================================================================== -->
-\begin{center}
-  {
-    \bfseries
-    
-    \vfill
-    
-    \Large
-    
-    BAB III
-    
-    DAFTAR PUSTAKA
-  }
-\end{center}
