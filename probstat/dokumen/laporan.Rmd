@@ -357,7 +357,7 @@ Berdasarkan histogram nilai IPM, sebagian besar data terkonsentrasi pada rentang
 \begin{center}
 \textbf{Gambar 3.3 Histogram Tingkat Kemiskinan}
 
-\includegraphics[width=12cm]{../gambar/histogram_kemiskinan.png}
+\includegraphics[width=12cm]{../gambar/histogramKemiskinan.png}
 \end{center}
 
 Histogram tingkat kemiskinan menunjukkan bahwa sebagian besar wilayah memiliki persentase kemiskinan pada kategori rendah hingga sedang. Namun demikian, terdapat beberapa wilayah dengan tingkat kemiskinan yang relatif tinggi sehingga menyebabkan distribusi data cenderung memanjang pada bagian kanan.
