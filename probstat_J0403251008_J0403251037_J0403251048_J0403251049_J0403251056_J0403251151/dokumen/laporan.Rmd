@@ -92,24 +92,20 @@ Fahrizal Azis & J0403251151\\
     \Large
 
     DAFTAR ISI
-
-    
   }
-  
-  
 \end{center}
 
 \begin{flushleft}
-BAB I \dotfill 1\\
+\textbf{BAB I \dotfill 1}\\
 \hspace*{0.5cm}1.1 Latar Belakang \dotfill 1\\
 \hspace*{0.5cm}1.2 Tujuan \dotfill 1\\[0.3cm]
 
-BAB II \dotfill 2\\
+\textbf{BAB II \dotfill 2}\\
 \hspace*{0.5cm}2.1 Dataset \dotfill 2\\
 \hspace*{0.5cm}2.2 Tools Yang Digunakan \dotfill 2\\
 \hspace*{0.5cm}2.3 Metode Analisis \dotfill 2\\[0.3cm]
 
-BAB III \dotfill 3\\
+\textbf{BAB III \dotfill 3}\\
 \hspace*{0.5cm}3.1 Statistika Deskriptif \dotfill 3\\
 \hspace*{0.5cm}3.2 Missing Value \dotfill 3\\
 \hspace*{0.5cm}3.3 Outlier \dotfill 3\\
@@ -118,24 +114,79 @@ BAB III \dotfill 3\\
 \hspace*{0.5cm}3.6 Korelasi \dotfill 3\\
 \hspace*{0.5cm}3.7 Interpretasi \dotfill 3\\[0.3cm]
 
-BAB IV \dotfill 4\\
+\textbf{BAB IV \dotfill 4}\\
 \hspace*{0.5cm}4.1 Kesimpulan Utama \dotfill 4\\
 \hspace*{0.5cm}4.2 Insight \dotfill 4\\
 \hspace*{0.5cm}4.3 Saran \dotfill 4\\[0.3cm]
 
-LAMPIRAN \dotfill 5\\
+\textbf{LAMPIRAN \dotfill 5}\\
 \hspace*{0.5cm}5.1 Script R \dotfill 5\\
 \hspace*{0.5cm}5.2 Output Tambahan \dotfill 5\\
 \end{flushleft}
 
 \thispagestyle{empty}
-
 <!-- =================================================================== -->
 <!-- =================================================================== -->
 <!-- =================================================================== -->
 
 \newpage
 
+<!-- =================================================================== -->
+<!-- =                          DAFTAR GAMBAR                          = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+
+    \vfill
+
+    \Large
+
+    DAFTAR GAMBAR
+  }
+\end{center}
+
+\begin{flushleft}
+\hspace*{0.5cm}Gambar 3.1 Boxplot Outlier \dotfill 1\\
+\end{flushleft}
+
+\thispagestyle{empty}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+<!-- =================================================================== -->
+<!-- =                          DAFTAR TABEL                           = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+
+    \vfill
+
+    \Large
+
+    DAFTAR TABEL
+  }
+\end{center}
+
+\begin{flushleft}
+\hspace*{0.5cm}Tabel 3.1 Hasil Statistika Deskriptif \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.2 Hasil Analisis \textit{Missing Value} \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.3 Hasil Analisis \textit{Outlier} \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.4 Nilai-Nilai Outlier yang Terdeteksi \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.5 Dampak \textit{Outlier} terhadap Nilai Rata-Rata \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.6 Hasil Analisis Korelasi \dotfill 1\\
+\end{flushleft}
+
+\thispagestyle{empty}
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
 
 <!-- =================================================================== -->
 <!-- =                              BAB I                              = -->
