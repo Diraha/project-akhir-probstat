@@ -81,6 +81,63 @@ Fahrizal Azis & J0403251151\\
 \newpage
 
 <!-- =================================================================== -->
+<!-- =                           DAFTAR ISI                            = -->
+<!-- =================================================================== -->
+\begin{center}
+  {
+    \bfseries
+
+    \vfill
+
+    \Large
+
+    DAFTAR ISI
+
+    
+  }
+  
+  
+\end{center}
+
+\begin{flushleft}
+BAB I \dotfill 1\\
+\hspace*{0.5cm}1.1 Latar Belakang \dotfill 1\\
+\hspace*{0.5cm}1.2 Tujuan \dotfill 1\\[0.3cm]
+
+BAB II \dotfill 2\\
+\hspace*{0.5cm}2.1 Dataset \dotfill 2\\
+\hspace*{0.5cm}2.2 Tools Yang Digunakan \dotfill 2\\
+\hspace*{0.5cm}2.3 Metode Analisis \dotfill 2\\[0.3cm]
+
+BAB III \dotfill 3\\
+\hspace*{0.5cm}3.1 Statistika Deskriptif \dotfill 3\\
+\hspace*{0.5cm}3.2 Missing Value \dotfill 3\\
+\hspace*{0.5cm}3.3 Outlier \dotfill 3\\
+\hspace*{0.5cm}3.4 Visualisasi \dotfill 3\\
+\hspace*{0.5cm}3.5 Distribusi Data \dotfill 3\\
+\hspace*{0.5cm}3.6 Korelasi \dotfill 3\\
+\hspace*{0.5cm}3.7 Interpretasi \dotfill 3\\[0.3cm]
+
+BAB IV \dotfill 4\\
+\hspace*{0.5cm}4.1 Kesimpulan Utama \dotfill 4\\
+\hspace*{0.5cm}4.2 Insight \dotfill 4\\
+\hspace*{0.5cm}4.3 Saran \dotfill 4\\[0.3cm]
+
+LAMPIRAN \dotfill 5\\
+\hspace*{0.5cm}5.1 Script R \dotfill 5\\
+\hspace*{0.5cm}5.2 Output Tambahan \dotfill 5\\
+\end{flushleft}
+
+\thispagestyle{empty}
+
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+
+\newpage
+
+
+<!-- =================================================================== -->
 <!-- =                              BAB I                              = -->
 <!-- =================================================================== -->
 \begin{center}
