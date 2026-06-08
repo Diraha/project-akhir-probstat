@@ -7,6 +7,12 @@ output:
 
 fontsize: 12pt
 
+geometry:
+  - left=3cm
+  - right=3cm
+  - top=3cm
+  - bottom=3cm
+
 header-includes:
   - \usepackage{fontspec}
   - \usepackage{indentfirst}
@@ -28,56 +34,44 @@ knitr::opts_chunk$set(echo = TRUE)
 <!-- =================================================================== -->
 \begin{center}
 
-\vspace*{1cm}
-
 {\Large \textbf{ANALISIS DATA PEMBANGUNAN WILAYAH}}
-
-\vspace{0.3cm}
 
 {\Large \textbf{MENGGUNAKAN R}}
 
-\vspace{2cm}
+\vspace{0.5cm}
 
 \textbf{Disusun Oleh:}
 
-\vspace{0.8cm}
+\vspace{0.5cm}
 
 \begin{tabular}{p{8cm}p{3cm}}
-Diaz Ramaananta Harahap & J0403251048\\
-Nashira Salima Firmansyah & J0403251056\\
-Dede Risma Komalasari & J0403251049\\
-Zalfa Nazla Azkiya & J0403251037\\
-Fahrizal Azis & J0403251151\\
 Muhamad Akbar Zainuri & J0403251008\\
+Zalfa Nazla Azkiya & J0403251037\\
+Diaz Ramaananta Harahap & J0403251048\\
+Dede Risma Komalasari & J0403251049\\
+Nashira Salima Firmansyah & J0403251056\\
+Fahrizal Azis & J0403251151\\
 \end{tabular}
 
-\vspace{1.2cm}
+\vspace{0.5cm}
 
 \includegraphics[width=3.5cm]{../gambar/Logo_IPB.png}
 
-\vspace{1.5cm}
+\vspace{0.5cm}
 
-\textbf{MATA KULIAH PROBABILITAS \& STATISTIKA}
+\large{\textbf{MATA KULIAH PROBABILITAS \& STATISTIKA}}
 
-\vspace{0.3cm}
+\large{\textbf{PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK}}
 
-\textbf{PROGRAM STUDI TEKNOLOGI REKAYASA PERANGKAT LUNAK}
+\large{\textbf{SEKOLAH VOKASI}}
 
-\vspace{0.3cm}
+\large{\textbf{INSTITUT PERTANIAN BOGOR}}
 
-\textbf{SEKOLAH VOKASI}
+\large{\textbf{BOGOR}}
 
-\vspace{0.3cm}
-
-\textbf{INSTITUT PERTANIAN BOGOR}
-
-\vspace{1.5cm}
-
-\textbf{2026}
+\large{\textbf{2026}}
 
 \end{center}
-
-\newpage
 
 \thispagestyle{empty}
 <!-- =================================================================== -->
@@ -104,14 +98,14 @@ Muhamad Akbar Zainuri & J0403251008\\
 \end{center}
 
 ## \normalsize 1.1  \hspace {0,5cm} Latar Belakang
-
-  Pembangunan wilayah adalah sebuah proses yang bertujuan untuk meningkatkan kesejahteraan masyarakat. Untuk mengetahui bagaimana suatu pembangunan wilayah di suatu daerah berhasil diperlukan indikator yang dapat menggambarkan keadaan masyarakat di wilayah tersebut dengan jelas, seperti angka kemiskinan, pengangguran, Produk Domestik Regional Bruto (PDRB), serta indeks pembangunan Manusia (IPM).
+\vspace{-0.5cm}
+Pembangunan wilayah adalah sebuah proses yang bertujuan untuk meningkatkan kesejahteraan masyarakat. Untuk mengetahui bagaimana suatu pembangunan wilayah di suatu daerah berhasil diperlukan indikator yang dapat menggambarkan keadaan masyarakat di wilayah tersebut dengan jelas, seperti angka kemiskinan, pengangguran, Produk Domestik Regional Bruto (PDRB), serta indeks pembangunan Manusia (IPM).
   
-  Oleh karena itu, diperlukan analisis data untuk mengolah informasi yang ada agar dapat memberikan gambaran tentang kondisi pembangunan di suatu wilayah. Berdasarkan kebutuhan tersebut, projek ini bertujuan untuk menganalisis data pembangunan wilayah di seluruh Indonesia dengan mengimplementasikan bahasa pemrograman R. Melalui projek akhir ini, mahasiswa diharapkan dapat meningkatkan keterampilan mereka dalam mengolah, menganalisis, dan menginterpretasikan data terkait pembangunan daerah dengan memanfaatkan bahasa pemrograman R.
+Oleh karena itu, diperlukan analisis data untuk mengolah informasi yang ada agar dapat memberikan gambaran tentang kondisi pembangunan di suatu wilayah. Berdasarkan kebutuhan tersebut, projek ini bertujuan untuk menganalisis data pembangunan wilayah di seluruh Indonesia dengan mengimplementasikan bahasa pemrograman R. Melalui projek akhir ini, mahasiswa diharapkan dapat meningkatkan keterampilan mereka dalam mengolah, menganalisis, dan menginterpretasikan data terkait pembangunan daerah dengan memanfaatkan bahasa pemrograman R.
   
 ## \normalsize 1.2  \hspace {0,5cm} Tujuan
-
-  Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Indonesia dengan memanfaatkan bahasa pemrograman R. Analisis dilakukan untuk mengenali ciri-ciri data, memahami hubungan di antara indikator pembangunan, serta mengungkap faktor-faktor yang memengaruhi tingkat perkembangan suatu daerah. Di samping itu, proyek ini bertujuan untuk mengaplikasikan konsep statistika dan analisis data dalam menyelesaikan masalah yang ada serta menyajikan hasil analisis dengan cara yang terstruktur dan informatif.
+\vspace{-0.5cm}
+Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Indonesia dengan memanfaatkan bahasa pemrograman R. Analisis dilakukan untuk mengenali ciri-ciri data, memahami hubungan di antara indikator pembangunan, serta mengungkap faktor-faktor yang memengaruhi tingkat perkembangan suatu daerah. Di samping itu, proyek ini bertujuan untuk mengaplikasikan konsep statistika dan analisis data dalam menyelesaikan masalah yang ada serta menyajikan hasil analisis dengan cara yang terstruktur dan informatif.
 
 \setcounter{page}{1}
 <!-- =================================================================== -->
@@ -138,36 +132,37 @@ Muhamad Akbar Zainuri & J0403251008\\
 \end{center}
 
 ## \normalsize 2.1  \hspace {0,5cm} Dataset
+\vspace{-0.5cm}
+Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
+  
+Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang telah dikelompokkan menjadi beberapa kategori:
 
-  Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
-  
-  Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang telah dikelompokkan menjadi beberapa kategori:
-  
   1. Variabel Identitas Data      : wilayah, provinsi, dan tahun.
   2. Variabel Ekonomi             : pdrb_perkapita, kemiskinan, dan pengangguran.
   3. Variabel Pembangunan Manusia : ipm, harapan_hidup, rata_lama_sekolah.
   4. Variabel Infrastruktur       : akses_internet, jalan_baik, air_bersih.
   5. Variabel Metadata            : catatan_data.
   
-  Dataset pembangunan wilayah tersebut berbentuk dokumen .csv. Dokumen ini bisa diunduh melalui https://pembangunanwilayahmissingoutlier.tiiny.site untuk melihat dataset secara keseluruhan.
+Dataset pembangunan wilayah tersebut berbentuk dokumen .csv. Dokumen ini bisa diunduh melalui https://pembangunanwilayahmissingoutlier.tiiny.site untuk melihat dataset secara keseluruhan.
   
 
 ## \normalsize 2.2  \hspace {0,5cm} Tools Yang Digunakan
+\vspace{-0.5cm}
+Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
 
-  Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
-  
   1. **Dataset format .csv:** Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
   2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
   3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
   4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
 
 ## \normalsize 2.3  \hspace {0,5cm} Metode Analisis
-  Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambaran mengenai kondisi pembangunan wilayah di Indonesia. Tahapan analisis yang dilakukan adalah sebagai berikut:
+\vspace{-0.5cm}
+Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambaran mengenai kondisi pembangunan wilayah di Indonesia. Tahapan analisis yang dilakukan adalah sebagai berikut:
 
   1. **Pengumpulan Data:** Data yang digunakan merupakan data indikator pembangunan wilayah yang mencakup beberapa variabel pdrb\_perkapita, kemiskinan, pengangguran, IPM, akses\_internet, dll).
   2. **Analisis Statistik Deskriptif:** Analisis statistik deskriptif dilakukan untuk menggambarkan karakteristik data melalui nilai minimum, nilai maksimum, rata-rata, median, standar deviasi, dan lain-lain.
   3. **Analisis Missing Value:** Missing value dianalisis dengan menghitung jumlah dan persentase data yang hilang pada seiap variabel. Hasil analisis digunakan untuk menentukan metode penanganan yang sesuai.
-  4. **Analisis Outliers:** Deteksi outlier dilakukan menggunakan metode Interquartile Range (IQR). Suatu data dikatakan sebagai outlier apabila berada di luar batas.
+  4. **Analisis Outlier:** Deteksi outlier dilakukan menggunakan metode Interquartile Range (IQR). Suatu data dikatakan sebagai outlier apabila berada di luar batas.
   5. **Visualisasi Data:** Visualisasi dilakukan untuk mempermudah interpretasi data menggunakan histogram, boxplot, scatter plot, dan heatmap korelasi.
   6. **Analisis Korelasi:** Analisis korelasi digunakan untuk mengetahui hubungan antar indikator pembangunan wilayah. Kolerasi dihitung menggunakan koefisien korelasi pearson dengan rentang nilai −1 ≤ r ≤ 1. Nilai korelasi yang mendekati 1 menunjukkan hubungan positif yang kuat, sedangkan nilai yang mendekati -1 menunjukkan hubungan negatif yang kuat.
 
@@ -196,10 +191,12 @@ Muhamad Akbar Zainuri & J0403251008\\
 \end{center}
 
 ## \normalsize 3.1  \hspace {0,5cm} Statistika Deskriptif
+\vspace{-0.5cm}
+Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
 
-  Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
+Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh variabel numerik pada dataset pembangunan wilayah menggunakan beberapa fungsi dalam bahasa pemrograman R seperti \textit{summary()}, \textit{mean()}, \textit{median()}, \textit{sd()}, \textit{var()}, dan \textit{quantile()}.
 
-  Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh variabel numerik pada dataset pembangunan wilayah menggunakan beberapa fungsi dalam bahasa pemrograman R seperti \textit{summary()}, \textit{mean()}, \textit{median()}, \textit{sd()}, \textit{var()}, dan \textit{quantile()}.
+\vspace{-0.5cm}
 
 \begin{center}
 \textbf{Tabel 3.1 Hasil Statistika Deskriptif}
@@ -224,20 +221,21 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 
 \end{center}
 
-  Berdasarkan hasil analisis, variabel \textit{pdrb\_perkapita} memiliki nilai rata-rata tertinggi dibandingkan variabel lainnya. Selain itu, variabel tersebut juga mempunyai standar deviasi terbesar yang menunjukkan bahwa terdapat perbedaan tingkat pendapatan yang cukup besar antar wilayah di Indonesia.
+Berdasarkan hasil analisis, variabel \textit{pdrb\_perkapita} memiliki nilai rata-rata tertinggi dibandingkan variabel lainnya. Selain itu, variabel tersebut juga mempunyai standar deviasi terbesar yang menunjukkan bahwa terdapat perbedaan tingkat pendapatan yang cukup besar antar wilayah di Indonesia.
 
-  Variabel \textit{kemiskinan} dan \textit{pengangguran} juga menunjukkan penyebaran data yang cukup besar. Hal ini terlihat dari rentang nilai minimum dan maksimum yang jauh berbeda. Pada variabel pengangguran, nilai maksimum bahkan jauh di atas rata-ratanya sehingga mengindikasikan adanya beberapa data ekstrem.
+Variabel \textit{kemiskinan} dan \textit{pengangguran} juga menunjukkan penyebaran data yang cukup besar. Hal ini terlihat dari rentang nilai minimum dan maksimum yang jauh berbeda. Pada variabel pengangguran, nilai maksimum bahkan jauh di atas rata-ratanya sehingga mengindikasikan adanya beberapa data ekstrem.
 
-  Sementara itu, variabel seperti \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki nilai mean dan median yang relatif berdekatan. Kondisi tersebut menunjukkan bahwa distribusi data pada variabel pembangunan manusia cenderung lebih stabil dan tidak terlalu menyebar.
+Sementara itu, variabel seperti \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki nilai mean dan median yang relatif berdekatan. Kondisi tersebut menunjukkan bahwa distribusi data pada variabel pembangunan manusia cenderung lebih stabil dan tidak terlalu menyebar.
 
-  Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat outlier pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai missing value dan outlier perlu dilakukan pada tahap berikutnya.
+Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat outlier pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai missing value dan outlier perlu dilakukan pada tahap berikutnya.
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
-  \textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
+\vspace{-0.5cm}
+\textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
   
-  Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \textit{missing value} dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
+Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \textit{missing value} dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
 
-\vspace{4cm}
+\vspace{6cm}
 
 \begin{center}
   \textbf{Tabel 3.2 Hasil Analisis \textit{Missing Value}}
@@ -264,25 +262,28 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
 
 \end{center}
 
-  Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}. Keberadaan \textit{missing value} ini dapat mempengaruhi hasil analisis statistik, salah satu contohnya adalah mengurangi jumlah observasi yang dapat di analisis.
+Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}. Keberadaan \textit{missing value} ini dapat mempengaruhi hasil analisis statistik, salah satu contohnya adalah mengurangi jumlah observasi yang dapat di analisis.
   
-  Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berbagai metode statistik. Akibatnya, jumlah data yang tersedia untuk analisis menjadi berkurang sehingga informasi yang diperoleh menjadi kurang lengkap.
+Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berbagai metode statistik. Akibatnya, jumlah data yang tersedia untuk analisis menjadi berkurang sehingga informasi yang diperoleh menjadi kurang lengkap.
   
-  Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
+Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
   
-  Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
+Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
-  \textit{Outliers} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outliers} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outliers} menjadi langkah penting yang harus dilakukan.
+\vspace{-0.5cm}
+\textit{Outlier} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outlier} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outlier} menjadi langkah penting yang harus dilakukan.
   
-  Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah variabel, yaitu \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran}. Berikut penjabaran seberapa banyak outliers yang dimiliki setiap variebal tersebut.
-  
+Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah variabel, yaitu \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran}. Berikut penjabaran seberapa banyak outlier yang dimiliki setiap variebal tersebut.
+
+\vspace{-0.5cm}
+
 \begin{center}
-  \textbf{Tabel 3.3 Hasil Analisis \textit{Outliers}}
+  \textbf{Tabel 3.3 Hasil Analisis \textit{Outlier}}
   
   \begin{tabular}{|c|c|}
   \hline
-  \textbf{Variabel} & \textbf{Jumlah Outliers} \\
+  \textbf{Variabel} & \textbf{Jumlah Outlier} \\
   \hline
   pdrb\_perkapita & 5 \\
   \hline
@@ -298,8 +299,10 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
   \includegraphics[width=15cm]{../gambar/boxplot_outlier.png}
 \end{center}
 
+\vspace{-2cm}
+
 \begin{center}
-  \textbf{Tabel 3.4 Nilai-Nilai \textit{Outliers} yang Terdeteksi}
+  \textbf{Tabel 3.4 Nilai-Nilai \textit{Outlier} yang Terdeteksi}
   
   \begin{tabular}{|c|c|c|}
   \hline
@@ -318,12 +321,14 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
   \end{tabular}
 \end{center}
 
-  Dalam analisis ini, metode deteksi \textit{outliers} yang kami gunakan adalah \textbf{IQR}. Metode ini mengidentifikasi \textit{outliers} dengan menghitung rentang antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Nilai yang berada diluar rentang [Q1 - 1.5 x IQR, Q3 + 1.5 x IQR] dianggap sebagai \textit{outliers}.
+Dalam analisis ini, metode deteksi \textit{outlier} yang kami gunakan adalah \textbf{IQR}. Metode ini mengidentifikasi \textit{outlier} dengan menghitung rentang antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Nilai yang berada diluar rentang [Q1 - 1.5 x IQR, Q3 + 1.5 x IQR] dianggap sebagai \textit{outlier}.
   
-  Nilai \textit{outliers} juga memiliki dampak besar terhadap analisis statistik, salah satu contohnya adalah, \textit{outliers} dapat menarik ukuran pemusatan data ke arah nilai ekstrem. Berikut tabel dampak nilai \textit{outliers} yang sudah di analisis.
-  
+Nilai \textit{outlier} juga memiliki dampak besar terhadap analisis statistik, salah satu contohnya adalah, \textit{outlier} dapat menarik ukuran pemusatan data ke arah nilai ekstrem. Berikut tabel dampak nilai \textit{outlier} yang sudah di analisis.
+
+\vspace{-0.5cm}
+
 \begin{center}
-  \textbf{Tabel 3.5 Dampak \textit{Outliers} terhadap Nilai Rata-Rata}
+  \textbf{Tabel 3.5 Dampak \textit{Outlier} terhadap Nilai Rata-Rata}
   
   \begin{tabular}{|c|c|c|c|}
   \hline
@@ -338,17 +343,19 @@ rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
   \end{tabular}
 \end{center}
 
-  Variabel \textit{pdrb\_perkapita} mengalami perubahan rata-rata terbesar setelah \textit{outlier} dihapus, yaitu sebesar 2.487.136. Ini menunjukkan bahwa keberadaan beberapa daerah dengan nilai \textit{pdrb\_perkapita} yang sangat tinggi memberikan pengaruh yang cukup besar terhadap nilai rata-rata keseluruhan. Sementara itu, variabel kemiskinan dan pengangguran hanya mengalami perubahan rata-rata yang relatif kecil, sehingga pengaruh \textit{outlier} terhadap kedua variabel tersebut tidak sebesar pada variabel \textit{pdrb\_perkapita}.
+Variabel \textit{pdrb\_perkapita} mengalami perubahan rata-rata terbesar setelah \textit{outlier} dihapus, yaitu sebesar 2.487.136. Ini menunjukkan bahwa keberadaan beberapa daerah dengan nilai \textit{pdrb\_perkapita} yang sangat tinggi memberikan pengaruh yang cukup besar terhadap nilai rata-rata keseluruhan. Sementara itu, variabel kemiskinan dan pengangguran hanya mengalami perubahan rata-rata yang relatif kecil, sehingga pengaruh \textit{outlier} terhadap kedua variabel tersebut tidak sebesar pada variabel \textit{pdrb\_perkapita}.
 
 ## \normalsize 3.4  \hspace {0,5cm} Visualisasi
 
 ## \normalsize 3.5  \hspace {0,5cm} Distribusi Data
 
 ## \normalsize 3.6  \hspace {0,5cm} Korelasi
-
+\vspace{-0.5cm}
 Analisis korelasi merupakan metode statistik yang digunakan untuk mengetahui hubungan antar variabel dalam suatu dataset. Pada penelitian ini, analisis korelasi dilakukan menggunakan metode \textit{Pearson} untuk mengukur kekuatan serta arah hubungan linear antar variabel pembangunan wilayah.
 
 Variabel yang dianalisis meliputi \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{ipm}, \textit{harapan\_hidup}, \textit{rata\_lama\_sekolah}, dan \textit{akses\_internet}. Hasil analisis korelasi ditampilkan dalam bentuk ringkasan berikut.
+
+\vspace{-0.5cm}
 
 \begin{center}
   \textbf{Tabel 3.6 Hasil Analisis Korelasi}
@@ -403,6 +410,7 @@ Tidak adanya korelasi yang kuat mengindikasikan bahwa variabel-variabel tersebut
 \end{center}
 
 ## \normalsize 4.1  \hspace {0,5cm} Kesimpulan Utama
+\vspace{-0.5cm}
 Berdasarkan hasil analisis data pembangunan wilayah menggunakan bahasa pemrograman R, dapat disimpulkan bahwa dataset memiliki kualitas yang baik dengan tingkat *missing value* yang sangat rendah, yaitu sekitar 0,45% dari keseluruhan data. Penanganan *missing value* dilakukan dengan metode penghapusan karena proporsinya relatif kecil dan tidak memengaruhi representativitas data secara signifikan.
 
 Analisis statistika deskriptif menunjukkan bahwa variabel ekonomi memiliki tingkat variasi yang lebih tinggi dibandingkan variabel pembangunan manusia. Selain itu, analisis *outlier* menunjukkan adanya beberapa data ekstrem pada variabel PDRB per kapita, kemiskinan, dan pengangguran.
@@ -411,12 +419,14 @@ Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan d
 
 
 ## \normalsize 4.2  \hspace {0,5cm} Insight
+\vspace{-0.5cm}
 1. Ketimpangan ekonomi antar wilayah masih terlihat dari adanya outlier pada variabel PDRB per kapita.
 2. Variabel pembangunan manusia seperti IPM, harapan hidup, dan rata-rata lama sekolah memiliki distribusi yang relatif stabil.
 3. Hubungan antar indikator pembangunan pada dataset tidak menunjukkan pola linear yang kuat.
 4. Analisis pembangunan wilayah memerlukan pendekatan multivariat karena satu indikator tidak cukup menjelaskan kondisi pembangunan secara keseluruhan.
 
 ## \normalsize 4.3  \hspace {0,5cm} Saran
+\vspace{-0.5cm}
 1. Menambahkan variabel lain seperti investasi daerah, tingkat urbanisasi, dan pengeluaran pemerintah agar analisis lebih komprehensif.
 2. Melakukan analisis regresi atau machine learning untuk mengidentifikasi faktor yang paling berpengaruh terhadap pembangunan wilayah.
 3. Melakukan visualisasi yang lebih mendalam menggunakan histogram, scatter plot, dan heatmap korelasi.
@@ -445,6 +455,7 @@ Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan d
 \end{center}
 
 ## \normalsize 5.1  \hspace {0,5cm} Script R
+\vspace{-0.5cm}
 ```r
 # ======================
 # 1.3.1 Memahami Dataset
@@ -828,6 +839,7 @@ print(uji_pdrb_ipm)
 
 ```
 ## \normalsize 5.2  \hspace {0,5cm} Output Tambahan
+\vspace{-0.5cm}
 ```{r echo=FALSE}
 # ======================
 # 1.3.1 Memahami Dataset
