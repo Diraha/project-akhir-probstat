@@ -339,7 +339,7 @@ Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberi
 
 ## \normalsize 3.2  \hspace {0,5cm} Missing Value
 \vspace{-0.5cm}
-\textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
+Menurut Rianto & Santosa (2024), \textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia.
   
 Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \textit{missing value} dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
 
@@ -376,11 +376,11 @@ Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berb
   
 Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
   
-Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
+Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2% dari data. Namun, jika jumlah data yang hilang mencapai 30% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan (Rianto & Santosa, 2024).
 
 ## \normalsize 3.3  \hspace {0,5cm} Outlier
 \vspace{-0.5cm}
-\textit{Outlier} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outlier} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outlier} menjadi langkah penting yang harus dilakukan.
+Menurut Rianto & Santosa (2024), \textit{Outlier} adalah nilai yang berbeda secara signifikan dari sebagian besar data lainnya, sering kali muncul karena kesalahan pengukuran, variasi alami, atau anomali yang tidak terduga. \textit{Outlier} dapat berdampak negatif pada analisis, seperti menggeser rata-rata. Oleh karena itu, deteksi dan penanganan \textit{outlier} menjadi langkah penting yang harus dilakukan.
   
 Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah variabel, yaitu \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran}. Berikut penjabaran seberapa banyak outlier yang dimiliki setiap variebal tersebut.
 
@@ -429,7 +429,7 @@ Pada penelitian ini, dataset pembangunan wilayah memiliki outlier pada sejumlah 
   \end{tabular}
 \end{center}
 
-Dalam analisis ini, metode deteksi \textit{outlier} yang kami gunakan adalah \textbf{IQR}. Metode ini mengidentifikasi \textit{outlier} dengan menghitung rentang antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Nilai yang berada diluar rentang [Q1 - 1.5 x IQR, Q3 + 1.5 x IQR] dianggap sebagai \textit{outlier}.
+Dalam analisis ini, metode deteksi \textit{outlier} yang kami gunakan adalah \textbf{IQR}. Metode ini mengidentifikasi \textit{outlier} dengan menghitung rentang antara kuartil pertama (Q1) dan kuartil ketiga (Q3). Nilai yang berada diluar rentang [Q1 - 1.5 x IQR, Q3 + 1.5 x IQR] dianggap sebagai \textit{outlier} (Rianto & Santosa, 2024).
   
 Nilai \textit{outlier} juga memiliki dampak besar terhadap analisis statistik, salah satu contohnya adalah, \textit{outlier} dapat menarik ukuran pemusatan data ke arah nilai ekstrem. Berikut tabel dampak nilai \textit{outlier} yang sudah di analisis.
 
