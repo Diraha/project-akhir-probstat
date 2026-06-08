@@ -1,7 +1,7 @@
 # ======================
 # 1.3.1 Memahami Dataset
 # ======================
-data_pembangunan <- read.csv("probstat/dataset/pembangunan_wilayah_missing_outlier.csv")
+data_pembangunan <- read.csv("probstat_J0403251008_J0403251037_J0403251048_J0403251049_J0403251056_J0403251151/dataset/pembangunan_wilayah_missing_outlier.csv")
 ("--- STRUKTUR DATA ---")
 str(data_pembangunan)
 
@@ -101,6 +101,8 @@ for(column_name in numeric_columns_name) {
   
     cat("\n====================================\n")
     cat("Variabel :", column_name, "\n")
+    cat("Lower Bound:", lower_bound, "\n")
+    cat("Upper Bound:", upper_bound, "\n")
     cat("Jumlah Outlier :", total_outlier, "\n")
   
     if(total_outlier > 0) {
