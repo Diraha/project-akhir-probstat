@@ -375,8 +375,6 @@ Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \tex
   \hline
   jalan\_baik & 25 & 1\% \\
   \hline
-  \multicolumn{2}{|l|}{\textbf{Rata-Rata Persentase}} & 0.45\% \\
-  \hline
   \end{tabular}
 
 \end{center}
