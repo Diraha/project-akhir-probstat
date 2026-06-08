@@ -21,7 +21,9 @@ header-includes:
   - \usepackage{indentfirst}
   - \usepackage{setspace}
   - \usepackage{fvextra}
+  - \usepackage{tabularx}
   - \fvset{breaklines=true,breakanywhere=true}
+  
 
   - \setmainfont{Times New Roman}
   - \setlength{\parindent}{1.18cm}
@@ -255,13 +257,39 @@ Proyek ini bertujuan untuk menganalisis data mengenai pembangunan wilayah di Ind
 \vspace{-0.5cm}
 Dataset adalah kumpulan data terstruktur yang digunakan untuk berbagai keperluan, seperti analisis, penelitian, atau pengolahan informasi lainnya [@james2021]. Di dalam sebuah dataset, terdapat sejumlah variabel yang disusun dalam bentuk tabel. Setiap kolom mewakili atribut tertentu, sementara setiap baris menggambarkan entitas atau observasi yang berbeda. Dataset menjadi komponen penting dalam pengolahan data, membantu menghasilkan informasi yang lebih bermakna dan bermanfaat.
   
-Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang telah dikelompokkan menjadi beberapa kategori:
-
-  1. Variabel Identitas Data      : wilayah, provinsi, dan tahun.
-  2. Variabel Ekonomi             : pdrb_perkapita, kemiskinan, dan pengangguran.
-  3. Variabel Pembangunan Manusia : ipm, harapan_hidup, rata_lama_sekolah.
-  4. Variabel Infrastruktur       : akses_internet, jalan_baik, air_bersih.
-  5. Variabel Metadata            : catatan_data.
+Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah tingkat Kabupaten/Kota di Indonesia. Secara keseluruhan, dataset ini mencakup observasi 2.500 baris kabupaten/kota dengan 13 kolom variabel, yang berada dalam rentang waktu lima tahun, yaitu dari tahun 2020 hingga 2024. Berikut adalah rincian variabel-variabel yang digunakan:
+  
+  \begin{tabularx}{\textwidth}{|c|c|X|}
+  \hline
+  \textbf{Variabel} & \textbf{Tipe data} & \textbf{Definisi} \\
+  \hline
+  Wilayah & character & nama kabupaten/kota yang diobservasi \\
+  \hline
+  provinsi & character & nama provinsi dari wilayah \\
+  \hline
+  tahun & integer & tahun data dicatat \\
+  \hline
+  pdrb\_perkapita & numeric & rata-rata pendapatan penduduk di wilayah tersebut. \\
+  \hline
+  kemiskinan & numeric & persentase penduduk di bawah garis kemiskinan \\
+  \hline
+  pengangguran & numeric & persentase pengangguran \\
+  \hline
+  ipm & numeric & ukuran komposit untuk menilai capaian pembangunan manusia (kesehatan, pendidikan, dan ekonomi). \\
+  \hline
+  harapan\_hidup & numeric & perkiraan rata-rata jumlah tahun yang dapat ditempuh oleh seorang bayi yang baru lahir. \\
+  \hline
+  rata\_lama\_sekolah & numeric & rata-rata jumlah tahun yang dihabiskan penduduk untuk menempuh pendidikan formal. \\
+  \hline
+  akses\_internet & numeric & tingkat keterjangkauan akses internet bagi penduduk di wilayah tersebut. \\
+  \hline
+  jalan\_baik & numeric & persentase infrastruktur jalan di wilayah tersebut yang memiliki kondisi baik. \\
+  \hline
+  air\_bersih & numeric & persentase rumah tangga yang memiliki akses terhadap sumber air minum layak/bersih. \\
+  \hline
+  catatan\_data & character & Keterangan status data, seperti apakah data dalam kondisi 'Normal', 'Missing Value', atau 'Outlier'. \\
+  \hline
+  \end{tabularx}
   
 Dataset pembangunan wilayah tersebut berbentuk dokumen .csv. Dokumen ini bisa diunduh melalui https://pembangunanwilayahmissingoutlier.tiiny.site untuk melihat dataset secara keseluruhan.
   
