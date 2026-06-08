@@ -454,8 +454,102 @@ Nilai \textit{outlier} juga memiliki dampak besar terhadap analisis statistik, s
 Variabel \textit{pdrb\_perkapita} mengalami perubahan rata-rata terbesar setelah \textit{outlier} dihapus, yaitu sebesar 2.487.136. Ini menunjukkan bahwa keberadaan beberapa daerah dengan nilai \textit{pdrb\_perkapita} yang sangat tinggi memberikan pengaruh yang cukup besar terhadap nilai rata-rata keseluruhan. Sementara itu, variabel kemiskinan dan pengangguran hanya mengalami perubahan rata-rata yang relatif kecil, sehingga pengaruh \textit{outlier} terhadap kedua variabel tersebut tidak sebesar pada variabel \textit{pdrb\_perkapita}.
 
 ## \normalsize 3.4  \hspace {0,5cm} Visualisasi
+Visualisasi data merupakan salah satu teknik analisis yang digunakan untuk menyajikan informasi dalam bentuk grafik sehingga pola, tren, serta karakteristik data dapat dipahami dengan lebih mudah. Pada penelitian ini, visualisasi dilakukan menggunakan library *ggplot2* pada bahasa pemrograman R untuk membantu proses interpretasi data pembangunan wilayah di Indonesia.
+
+Beberapa jenis visualisasi yang digunakan meliputi histogram, boxplot, dan scatter plot. Histogram digunakan untuk melihat distribusi data pada variabel *ipm* dan *kemiskinan*, boxplot digunakan untuk mengidentifikasi keberadaan *outlier* pada variabel *pdrb_perkapita*, sedangkan scatter plot digunakan untuk mengamati hubungan antar variabel pembangunan wilayah.
+
+\begin{center}
+\textbf{Gambar 3.2 Histogram Nilai IPM}
+
+\includegraphics[width=12cm]{../gambar/histogramIPM.png}
+\end{center}
+
+Berdasarkan histogram nilai IPM, sebagian besar data terkonsentrasi pada rentang nilai menengah hingga tinggi. Hal ini menunjukkan bahwa mayoritas kabupaten/kota di Indonesia memiliki tingkat pembangunan manusia yang relatif baik. Distribusi data juga terlihat cukup terpusat dengan penyebaran yang tidak terlalu ekstrem.
+
+\begin{center}
+\textbf{Gambar 3.3 Histogram Tingkat Kemiskinan}
+
+\includegraphics[width=12cm]{../gambar/histogram_kemiskinan.png}
+\end{center}
+
+Histogram tingkat kemiskinan menunjukkan bahwa sebagian besar wilayah memiliki persentase kemiskinan pada kategori rendah hingga sedang. Namun demikian, terdapat beberapa wilayah dengan tingkat kemiskinan yang relatif tinggi sehingga menyebabkan distribusi data cenderung memanjang pada bagian kanan.
+
+\begin{center}
+\textbf{Gambar 3.4 Boxplot PDRB Per Kapita}
+
+\includegraphics[width=12cm]{../gambar/boxplot_pdrb.png}
+\end{center}
+
+Boxplot variabel *pdrb_perkapita* menunjukkan adanya beberapa nilai ekstrem yang berada di luar batas whisker. Hasil ini sejalan dengan analisis *outlier* sebelumnya yang menunjukkan bahwa terdapat sejumlah wilayah dengan nilai PDRB per kapita yang jauh lebih tinggi dibandingkan mayoritas wilayah lainnya.
+
+\begin{center}
+\textbf{Gambar 3.5 Scatter Plot Kemiskinan dan IPM}
+
+\includegraphics[width=12cm]{../gambar/scatter_kemiskinan_ipm.png}
+\end{center}
+
+Scatter plot antara tingkat kemiskinan dan IPM menunjukkan adanya kecenderungan hubungan negatif. Secara umum, wilayah dengan tingkat kemiskinan yang lebih tinggi cenderung memiliki nilai IPM yang lebih rendah. Akan tetapi, pola hubungan yang terbentuk tidak terlalu kuat karena penyebaran titik data masih cukup luas.
+
+\begin{center}
+\textbf{Gambar 3.6 Scatter Plot Akses Internet dan Rata-rata Lama Sekolah}
+
+\includegraphics[width=12cm]{../gambar/scatter_internet_sekolah.png}
+\end{center}
+
+Hubungan antara akses internet dan rata-rata lama sekolah menunjukkan kecenderungan hubungan positif. Wilayah dengan akses internet yang lebih tinggi umumnya memiliki rata-rata lama sekolah yang lebih baik. Meskipun demikian, penyebaran titik yang cukup luas menunjukkan bahwa terdapat faktor lain yang turut memengaruhi tingkat pendidikan masyarakat.
+
+Secara keseluruhan, visualisasi data memberikan gambaran yang lebih jelas mengenai karakteristik pembangunan wilayah di Indonesia. Hasil visualisasi juga mendukung analisis sebelumnya terkait keberadaan *outlier* serta adanya variasi kondisi pembangunan antarwilayah.
 
 ## \normalsize 3.5  \hspace {0,5cm} Distribusi Data
+Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap beberapa variabel, yaitu \textit{ipm}, \textit{kemiskinan}, dan \textit{akses_internet}. Selain itu, distribusi data juga diamati menggunakan QQ Plot untuk membandingkan distribusi data aktual dengan distribusi normal teoritis.
+
+\begin{center}
+\textbf{Tabel 3.6 Hasil Uji Normalitas Shapiro-Wilk}
+
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Variabel} & \textbf{P-Value} & \textbf{Kesimpulan} \
+\hline
+IPM & ISI_HASIL_R & ISI_HASIL_R \
+\hline
+Kemiskinan & ISI_HASIL_R & ISI_HASIL_R \
+\hline
+Akses Internet & ISI_HASIL_R & ISI_HASIL_R \
+\hline
+\end{tabular}
+\end{center}
+
+Uji normalitas Shapiro-Wilk dilakukan dengan tingkat signifikansi sebesar 5% ($\alpha = 0,05$). Apabila nilai \textit{p-value} lebih besar dari 0,05 maka data dianggap berdistribusi normal. Sebaliknya, apabila nilai \textit{p-value} lebih kecil dari 0,05 maka data dinyatakan tidak berdistribusi normal.
+
+\begin{center}
+\textbf{Gambar 3.7 QQ Plot Variabel IPM}
+
+\includegraphics[width=12cm]{../gambar/qqplot_ipm.png}
+\end{center}
+
+\begin{center}
+\textbf{Gambar 3.8 QQ Plot Variabel Kemiskinan}
+
+\includegraphics[width=12cm]{../gambar/qqplot_kemiskinan.png}
+\end{center}
+
+\begin{center}
+\textbf{Gambar 3.9 QQ Plot Variabel Akses Internet}
+
+\includegraphics[width=12cm]{../gambar/qqplot_akses_internet.png}
+\end{center}
+
+Berdasarkan hasil visualisasi QQ Plot, sebagian besar titik data berada di sekitar garis diagonal. Hal ini menunjukkan bahwa distribusi data masih memiliki kemiripan dengan distribusi normal. Akan tetapi, pada bagian ekor distribusi terdapat beberapa titik yang menyimpang dari garis referensi sehingga menunjukkan adanya deviasi terhadap distribusi normal sempurna.
+
+Penyimpangan tersebut kemungkinan dipengaruhi oleh variasi kondisi pembangunan antarwilayah serta keberadaan nilai ekstrem yang telah teridentifikasi pada analisis \textit{outlier}. Faktor tersebut menyebabkan distribusi data menjadi tidak sepenuhnya simetris.
+
+Selain analisis distribusi, dilakukan pula analisis probabilitas untuk memperoleh gambaran peluang terjadinya suatu kondisi pada data pembangunan wilayah. Analisis probabilitas dilakukan menggunakan peluang empiris berdasarkan data aktual serta fungsi distribusi normal pada variabel IPM.
+
+Hasil perhitungan menunjukkan peluang suatu wilayah memiliki tingkat kemiskinan di atas rata-rata sebesar \textbf{ISI_HASIL_R}. Sementara itu, peluang suatu wilayah memiliki nilai IPM lebih dari 75 adalah sebesar \textbf{ISI_HASIL_R}. Berdasarkan pendekatan distribusi normal, peluang nilai IPM kurang dari 75 diperoleh sebesar \textbf{ISI_HASIL_R}.
+
+Selain itu, hasil perhitungan persentil ke-95 menunjukkan bahwa nilai IPM sebesar \textbf{ISI_HASIL_R} dapat dijadikan batas atas yang hanya dicapai oleh sekitar 5% wilayah dengan tingkat pembangunan manusia tertinggi.
+
+Secara umum, hasil uji normalitas, QQ Plot, dan analisis probabilitas menunjukkan bahwa karakteristik distribusi data berbeda untuk setiap variabel. Oleh karena itu, interpretasi hasil analisis statistik perlu mempertimbangkan asumsi distribusi data yang digunakan agar kesimpulan yang diperoleh lebih akurat.
 
 ## \normalsize 3.6  \hspace {0,5cm} Korelasi
 \vspace{-0.5cm}
