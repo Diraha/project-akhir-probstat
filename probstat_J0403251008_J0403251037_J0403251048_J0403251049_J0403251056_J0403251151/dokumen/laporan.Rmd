@@ -152,14 +152,14 @@ Fahrizal Azis & J0403251151\\
 \end{center}
 
 \begin{flushleft}
-\hspace*{0.5cm}Gambar 3.1 Boxplot Outlier \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.2 Histogram Nilai IPM \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.3 Histogram Tingkat Kemiskinan \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.4 Boxplot PDRB Per Kapita \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.5 Scatter Plot Kemiskinan dan IPM \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.6 Scatter Plot Akses Internet dan Rata-rata Lama Sekolah \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.7 QQ Plot Variabel IPM \dotfill 1\\
-\hspace*{0.5cm}Gambar 3.8 QQ Plot Variabel Kemiskinan \dotfill 1\\
+\hspace*{0.5cm}Gambar 3.1 Boxplot Outlier \dotfill 8\\
+\hspace*{0.5cm}Gambar 3.2 Histogram Nilai IPM \dotfill 10\\
+\hspace*{0.5cm}Gambar 3.3 Histogram Tingkat Kemiskinan \dotfill 10\\
+\hspace*{0.5cm}Gambar 3.4 Boxplot PDRB Per Kapita \dotfill 11\\
+\hspace*{0.5cm}Gambar 3.5 Scatter Plot Kemiskinan dan IPM \dotfill 12\\
+\hspace*{0.5cm}Gambar 3.6 Scatter Plot Akses Internet dan Rata-rata Lama Sekolah \dotfill 13\\
+\hspace*{0.5cm}Gambar 3.7 QQ Plot Variabel IPM \dotfill 15\\
+\hspace*{0.5cm}Gambar 3.8 QQ Plot Variabel Kemiskinan \dotfill 15\\
 \end{flushleft}
 <!-- =================================================================== -->
 <!-- =================================================================== -->
@@ -183,13 +183,13 @@ Fahrizal Azis & J0403251151\\
 \end{center}
 
 \begin{flushleft}
-\hspace*{0.5cm}Tabel 3.1 Hasil Statistika Deskriptif \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.2 Hasil Analisis \textit{Missing Value} \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.3 Hasil Analisis \textit{Outlier} \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.4 Nilai-Nilai Outlier yang Terdeteksi \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.5 Dampak \textit{Outlier} terhadap Nilai Rata-Rata \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.6 Hasil Analisis Korelasi \dotfill 1\\
-\hspace*{0.5cm}Tabel 3.7 Hasil Uji Normalitas Shapiro-Wilk \dotfill 1\\
+\hspace*{0.5cm}Tabel 3.1 Hasil Statistika Deskriptif \dotfill 5\\
+\hspace*{0.5cm}Tabel 3.2 Hasil Analisis \textit{Missing Value} \dotfill 7\\
+\hspace*{0.5cm}Tabel 3.3 Hasil Analisis \textit{Outlier} \dotfill 8\\
+\hspace*{0.5cm}Tabel 3.4 Nilai-Nilai Outlier yang Terdeteksi \dotfill 8\\
+\hspace*{0.5cm}Tabel 3.5 Dampak \textit{Outlier} terhadap Nilai Rata-Rata \dotfill 9\\
+\hspace*{0.5cm}Tabel 3.6 Hasil Analisis Korelasi \dotfill 17\\
+\hspace*{0.5cm}Tabel 3.7 Hasil Uji Normalitas Shapiro-Wilk \dotfill 14\\
 \end{flushleft}
 <!-- =================================================================== -->
 <!-- =================================================================== -->
