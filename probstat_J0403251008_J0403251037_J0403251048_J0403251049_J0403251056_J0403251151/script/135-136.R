@@ -177,17 +177,14 @@ cat(
 # TABEL RINGKAS HASIL UJI NORMALITAS
 # =====================================================
 
-hasil_normalitas <- data.frame(
-  Variabel = c(
-    "IPM",
-    "Kemiskinan",
-    "Akses Internet"
-  ),
-  P_Value = c(
-    shapiro_ipm$p.value,
-    shapiro_kemiskinan$p.value,
-    shapiro_internet$p.value
-  )
+hasil_normalitas <- data.frame( 
+  Variabel = c( 
+    "IPM", "Kemiskinan" 
+  ), 
+  P_Value = c( 
+    shapiro_ipm$p.value, 
+    shapiro_kemiskinan$p.value 
+  ) 
 )
 
 hasil_normalitas$Kesimpulan <-
