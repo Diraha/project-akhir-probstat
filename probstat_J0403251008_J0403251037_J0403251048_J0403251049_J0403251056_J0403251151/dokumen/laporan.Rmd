@@ -397,7 +397,7 @@ Variabel \textit{pdrb_perkapita} mengalami perubahan rata-rata terbesar setelah 
 
 ```{r visualisasi_data, echo=FALSE, fig.align='center', out.width='85%'}
 # Memanggil gambar scatter plot dari folder gambar kelompok
-knitr::include_graphics("../gambar/hubAksesInternet&rataLamaSekolah.png")
+knitr::include_graphics("../gambar/hubAksesInternet\&rataLamaSekolah.png")
 knitr::include_graphics("../gambar/hubungankemiskinandgIPM.png")
 
 ```
