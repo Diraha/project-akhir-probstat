@@ -480,8 +480,21 @@ Berdasarkan hasil analisis, seluruh nilai korelasi berada sangat dekat dengan no
 
 Tidak adanya korelasi yang kuat mengindikasikan bahwa variabel-variabel tersebut tidak memiliki hubungan linear yang signifikan dan kemungkinan dipengaruhi oleh faktor lain di luar model yang digunakan.
 
-## \normalsize 3.7  \hspace {0.5cm} Interpretasi
+## \normalsize 3.7  \hspace {0,5cm} Interpretasi
 
+Berdasarkan seluruh hasil analisis yang telah dilakukan pada dataset pembangunan wilayah, dapat disimpulkan bahwa data memiliki karakteristik yang cukup beragam dengan tingkat penyebaran yang berbeda pada setiap variabel.
+
+Pada analisis statistika deskriptif, variabel \textit{pdrb\_perkapita} menunjukkan nilai rata-rata yang tinggi dengan standar deviasi terbesar, yang mengindikasikan adanya ketimpangan ekonomi antar wilayah. Sementara itu, variabel \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki penyebaran yang relatif kecil, sehingga dapat dikatakan lebih stabil dibandingkan variabel ekonomi.
+
+Dari analisis \textit{missing value}, diketahui bahwa proporsi data yang hilang relatif kecil, yaitu sekitar 1\% pada setiap variabel. Oleh karena itu, metode penghapusan data dipilih karena tidak memberikan dampak signifikan terhadap representativitas data secara keseluruhan.
+
+Selanjutnya, pada analisis \textit{outlier}, ditemukan bahwa variabel \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran} memiliki nilai ekstrem. Keberadaan \textit{outlier} ini terbukti mempengaruhi nilai rata-rata, terutama pada variabel \textit{pdrb\_perkapita} yang mengalami perubahan paling besar setelah penghapusan \textit{outlier}. Hal ini menunjukkan adanya beberapa wilayah dengan kondisi ekonomi yang sangat berbeda dibandingkan wilayah lainnya.
+
+Pada analisis distribusi data, terdapat indikasi bahwa beberapa variabel tidak berdistribusi normal, terutama variabel ekonomi. Hal ini sejalan dengan ditemukannya \textit{outlier} serta perbedaan yang cukup besar antara nilai minimum dan maksimum.
+
+Hasil analisis korelasi menunjukkan bahwa seluruh hubungan antar variabel memiliki nilai yang sangat kecil (mendekati nol), yaitu dalam rentang sekitar -0,03 hingga 0,01. Hal ini menunjukkan bahwa tidak terdapat hubungan linear yang signifikan antar variabel, sehingga peningkatan pada satu indikator tidak secara langsung berkaitan dengan peningkatan indikator lainnya.
+
+Secara keseluruhan, hasil analisis menunjukkan bahwa pembangunan wilayah merupakan fenomena yang kompleks dan tidak dapat dijelaskan hanya dengan hubungan linear sederhana. Terdapat ketimpangan pada beberapa indikator ekonomi, serta variasi antar wilayah yang cukup tinggi, sehingga diperlukan analisis lanjutan yang lebih mendalam untuk memahami faktor-faktor yang mempengaruhi pembangunan wilayah secara komprehensif.
 \setcounter{page}{3}
 \newpage
 
