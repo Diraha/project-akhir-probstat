@@ -247,7 +247,7 @@ HASIL DAN PEMBAHASAN
 }
 \end{center}
 
-## \normalsize 3.1  \hspace {0.5cm} Statistika Deskriptif
+## \normalsize 3.1 \hspace {0.5cm} Statistika Deskriptif
 
 \vspace{-0.5cm}
 Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
@@ -259,33 +259,39 @@ Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh v
 \begin{center}
 \textbf{Tabel 3.1 Hasil Statistika Deskriptif}
 
-\begin{tabular}{|l|c|c|c|}
+\begin{tabular}{|l|c|c|l|}
 \hline
 \textbf{Variabel} & \textbf{Mean} & \textbf{SD} & \textbf{Keterangan} \\
 \hline
-pdrb\_perkapita & Tinggi & Paling besar & Penyebaran sangat tinggi \\
+pdrb\_perkapita & 135650505,10 & 89341271,76 & Pendapatan tinggi, penyebaran sangat timpang \\
 \hline
-kemiskinan & 13,72 & Cukup besar & Terdapat variasi data \\
+kemiskinan & 13,72 & 6,89 & Tingkat kemiskinan cukup bervariasi \\
 \hline
-pengangguran & 8 & Besar & Indikasi data ekstrem \\
+pengangguran & 8,05 & 4,26 & Terdapat indikasi nilai ekstrem atas \\
 \hline
-ipm & 69--70 & Relatif kecil & Distribusi stabil \\
+ipm & 69,90 & 8,54 & Distribusi data manusia relatif stabil \\
 \hline
-harapan\_hidup & 69 tahun & Relatif kecil & Distribusi stabil \\
+harapan\_hidup & 69,13 & 5,17 & Rentang usia hidup cenderung homogen \\
 \hline
-rata\_lama\_sekolah & 9,5 tahun & Relatif kecil & Distribusi stabil \\
+rata\_lama\_sekolah & 9,58 & 2,63 & Capaian durasi pendidikan cukup merata \\
+\hline
+akses\_internet & 58,79 & 22,82 & Kesenjangan infrastruktur digital tinggi \\
+\hline
+jalan\_baik & 65,26 & 20,37 & Kualitas fasilitas jalan cukup beragam \\
+\hline
+air\_bersih & 69,76 & 17,50 & Akses sanitasi wilayah bervariasi \\
 \hline
 \end{tabular}
 
 \end{center}
 
-Berdasarkan hasil analisis, variabel \textit{pdrb\_perkapita} memiliki nilai rata-rata tertinggi dibandingkan variabel lainnya. Selain itu, variabel tersebut juga mempunyai standar deviasi terbesar yang menunjukkan bahwa terdapat perbedaan tingkat pendapatan yang cukup besar antar wilayah di Indonesia.
+Berdasarkan hasil analisis, variabel \textit{pdrb\_perkapita} memiliki nilai rata-rata tertinggi dibandingkan variabel lainnya dengan nilai rata-rata sebesar 135.650.505,10. Selain itu, variabel tersebut juga mempunyai standar deviasi terbesar yaitu 89.341.271,76 yang menunjukkan bahwa terdapat perbedaan tingkat pendapatan ekonomi yang sangat kontras antar wilayah di Indonesia.
 
-Variabel \textit{kemiskinan} dan \textit{pengangguran} juga menunjukkan penyebaran data yang cukup besar. Hal ini terlihat dari rentang nilai minimum dan maksimum yang jauh berbeda. Pada variabel pengangguran, nilai maksimum bahkan jauh di atas rata-ratanya sehingga mengindikasikan adanya beberapa data ekstrem.
+Variabel \textit{kemiskinan}, \textit{pengangguran}, serta \textit{akses\_internet} juga menunjukkan tingkat penyebaran data yang cukup besar. Hal ini terlihat dari nilai standar deviasi variabel \textit{akses\_internet} yang mencapai 22,82, mengindikasikan adanya gap digitalisasi yang nyata antardaerah. Pada variabel pengangguran, rata-rata sebesar 8,05 namun memiliki nilai maksimum yang jauh di atas rata-ratanya sehingga mengindikasikan adanya beberapa daerah dengan tingkat pengangguran ekstrem.
 
-Sementara itu, variabel seperti \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki nilai mean dan median yang relatif berdekatan. Kondisi tersebut menunjukkan bahwa distribusi data pada variabel pembangunan manusia cenderung lebih stabil dan tidak terlalu menyebar.
+Sementara itu, variabel dimensi manusia seperti \textit{ipm} (69,90), \textit{harapan\_hidup} (69,13), dan \textit{rata\_lama\_sekolah} (9,58) memiliki sebaran nilai standar deviasi yang relatif kecil. Kondisi tersebut menunjukkan bahwa capaian fondasi pembangunan manusia dasar cenderung lebih stabil, homogen, dan tidak terlalu menyebar ekstrem antarkabupaten/kota.
 
-Perbedaan mean dan median yang cukup jauh pada beberapa variabel ekonomi memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat outlier pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai missing value dan outlier perlu dilakukan pada tahap berikutnya.
+Perbedaan nilai mean dan median yang cukup jauh, terutama pada variabel makro ekonomi, memberikan indikasi awal bahwa data kemungkinan tidak berdistribusi normal serta terdapat *outlier* pada beberapa wilayah. Oleh karena itu, analisis lanjutan mengenai \textit{missing value} dan \textit{outlier} perlu dilakukan pada tahap berikutnya oleh tim analisis data.
 
 ## \normalsize 3.2  \hspace {0.5cm} Missing Value
 
@@ -495,6 +501,7 @@ Pada analisis distribusi data, terdapat indikasi bahwa beberapa variabel tidak b
 Hasil analisis korelasi menunjukkan bahwa seluruh hubungan antar variabel memiliki nilai yang sangat kecil (mendekati nol), yaitu dalam rentang sekitar -0,03 hingga 0,01. Hal ini menunjukkan bahwa tidak terdapat hubungan linear yang signifikan antar variabel, sehingga peningkatan pada satu indikator tidak secara langsung berkaitan dengan peningkatan indikator lainnya.
 
 Secara keseluruhan, hasil analisis menunjukkan bahwa pembangunan wilayah merupakan fenomena yang kompleks dan tidak dapat dijelaskan hanya dengan hubungan linear sederhana. Terdapat ketimpangan pada beberapa indikator ekonomi, serta variasi antar wilayah yang cukup tinggi, sehingga diperlukan analisis lanjutan yang lebih mendalam untuk memahami faktor-faktor yang mempengaruhi pembangunan wilayah secara komprehensif.
+
 \setcounter{page}{3}
 \newpage
 

@@ -25,25 +25,25 @@ data_numerik <- data_pembangunan[sapply(data_pembangunan, is.numeric)]
 summary(data_numerik)
 
 ("--- Mean ---")
-sapply(data_numerik, mean, na.rm = TRUE)
+round(sapply(data_numerik, mean, na.rm = TRUE), 2)
 
 ("--- Median ---")
-sapply(data_numerik, median, na.rm = TRUE)
+round(sapply(data_numerik, median, na.rm = TRUE), 2)
 
 ("--- Nilai minimum ---")
-sapply(data_numerik, min, na.rm = TRUE)
+round(sapply(data_numerik, min, na.rm = TRUE), 2)
 
 ("--- Nilai maksimum ---")
-sapply(data_numerik, max, na.rm = TRUE)
+round(sapply(data_numerik, max, na.rm = TRUE), 2)
 
 ("--- Standar deviasi ---")
-sapply(data_numerik, sd, na.rm = TRUE)
+round(sapply(data_numerik, sd, na.rm = TRUE), 2)
 
 ("--- Varians ---")
-sapply(data_numerik, var, na.rm = TRUE)
+round(sapply(data_numerik, var, na.rm = TRUE), 2)
 
 ("--- Kuartil ---")
-sapply(data_numerik, quantile, na.rm = TRUE)
+round(sapply(data_numerik, quantile, na.rm = TRUE), 2)
 
 # ============================
 # 1.3.3 Analisis Missing Value
