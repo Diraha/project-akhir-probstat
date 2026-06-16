@@ -7,6 +7,9 @@ output:
 
 fontsize: 12pt
 
+bibliography: referensi.bib
+csl: ipb.csl 
+
 geometry:
   - left=3cm
   - right=3cm
@@ -213,9 +216,9 @@ Data yang digunakan dalam analisis ini adalah dataset skor pembangunan wilayah t
 Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library ggplot2 untuk menghasilkan informasi yang terstruktur dan akurat tentang pembangunan wilayah di Indonesia. Berikut adalah rincian tools yang digunakan:
 
 1. **Dataset format .csv:** Digunakan sebagai format penyimpanan data mentah yang menjadi objek utama analisis.
-2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
-3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengeksekusi kode R. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
-4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
+2. **Bahasa Pemrograman R:** R digunakan sebagai bahasa pemrograman utama untuk komputasi statistik dan analisis data [@wickham2023].. Bahasa ini dipilih karena memiliki kemampuan yang kuat dalam melakukan manipulasi data, serta menyediakan berbagai paket statistik yang mumpuni untuk melakukan analisis deskriptif maupun inferensial pada dataset.
+3. **RStudio:** RStudio digunakan sebagai *Integrated Development Environment* (IDE) atau lingkungan pengembangan terintegrasi untuk menulis dan mengembangkan program R [@rstudio2024]. RStudio mempermudah manajemen proyek, pemantauan variabel, penanganan error melalui antarmuka yang interaktif, serta mendukung penyusunan laporan menggunakan R Markdown.
+4. **Library ggplot2:** Library ggplot2 digunakan untuk memenuhi kebutuhan visualisasi data dan pembuatan grafik statistik [@wickham2016].. Library ini memungkinkan pembuatan grafik secara modular. Di dalam proyek ini, ggplot2 digunakan untuk menyajikan tren indikator pembangunan, mengidentifikasi sebaran data, serta memberikan visualisasi perbandingan kondisi antarwilayah secara informatif.
 
 ## \normalsize 2.3  \hspace {0.5cm} Metode Analisis
 
@@ -223,11 +226,11 @@ Dalam melakukan analisis data ini, digunakan perangkat lunak Rstudio dan library
 Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambaran mengenai kondisi pembangunan wilayah di Indonesia. Tahapan analisis yang dilakukan adalah sebagai berikut:
 
 1. **Pengumpulan Data:** Data yang digunakan merupakan data indikator pembangunan wilayah yang mencakup beberapa variabel (pdrb\_perkapita, kemiskinan, pengangguran, IPM, akses\_internet, dll).
-2. **Analisis Statistik Deskriptif:** Analisis statistik deskriptif dilakukan untuk menggambarkan karakteristik data melalui nilai minimum, nilai maksimum, rata-rata, median, standar deviasi, dan lain-lain.
+2. **Analisis Statistik Deskriptif:** Analisis statistik deskriptif dilakukan untuk menggambarkan karakteristik data melalui ukuran pemusatan dan penyebaran data [@walpole2018] yakni nilai minimum, nilai maksimum, rata-rata, median, standar deviasi, dan lain-lain.
 3. **Analisis Missing Value:** Missing value dianalisis dengan menghitung jumlah dan persentase data yang hilang pada setiap variabel. Hasil analisis digunakan untuk menentukan metode penanganan yang sesuai.
 4. **Analisis Outlier:** Deteksi outlier dilakukan menggunakan metode Interquartile Range (IQR). Suatu data dikatakan sebagai outlier apabila berada di luar batas.
-5. **Visualisasi Data:** Visualisasi dilakukan untuk mempermudah interpretasi data menggunakan histogram, boxplot, scatter plot, dan heatmap korelasi.
-6. **Analisis Korelasi:** Analisis korelasi digunakan untuk mengetahui hubungan antar indikator pembangunan wilayah. Kolerasi dihitung menggunakan koefisien korelasi pearson dengan rentang nilai $−1 \le r \le 1$. Nilai korelasi yang mendekati 1 menunjukkan hubungan positif yang kuat, sedangkan nilai yang mendekati -1 menunjukkan hubungan negatif yang kuat.
+5. **Visualisasi Data:** Visualisasi dilakukan untuk mempermudah interpretasi data menggunakan histogram, boxplot, scatter plot, dan heatmap korelasi untuk membantu memahami pola dan karakteristik data secara lebih efektif [@wickham2016].
+6. **Analisis Korelasi:** Analisis korelasi digunakan untuk mengetahui kekuatan dan arah hubungan antar variabel numerik [@hair2019]. Kolerasi dihitung menggunakan koefisien korelasi pearson dengan rentang nilai $−1 \le r \le 1$. Nilai korelasi yang mendekati 1 menunjukkan hubungan positif yang kuat, sedangkan nilai yang mendekati -1 menunjukkan hubungan negatif yang kuat.
 
 \setcounter{page}{2}
 \newpage
@@ -250,7 +253,7 @@ HASIL DAN PEMBAHASAN
 ## \normalsize 3.1 \hspace {0.5cm} Statistika Deskriptif
 
 \vspace{-0.5cm}
-Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
+Statistika deskriptif merupakan metode statistik yang digunakan untuk meringkas dan menggambarkan karakteristik utama dari suatu kumpulan data secara numerik [@walpole2018]. Analisis ini bertujuan untuk memberikan gambaran awal mengenai kondisi data pembangunan wilayah, khususnya terkait ukuran pemusatan data seperti mean dan median serta ukuran penyebaran data seperti standar deviasi, varians, dan rentang nilai.
 
 Pada penelitian ini, analisis statistika deskriptif dilakukan terhadap seluruh variabel numerik pada dataset pembangunan wilayah menggunakan beberapa fungsi dalam bahasa pemrograman R seperti \textit{summary()}, \textit{mean()}, \textit{median()}, \textit{sd()}, \textit{var()}, dan \textit{quantile()}.
 
@@ -296,7 +299,7 @@ Perbedaan nilai mean dan median yang cukup jauh, terutama pada variabel makro ek
 ## \normalsize 3.2  \hspace {0.5cm} Missing Value
 
 \vspace{-0.5cm}
-\textit{Missing value}, atau data yang hilang, terjadi ketika salah satu kolom atau atribut dalam dataset tidak memiliki nilai. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
+\textit{Missing value}, atau data yang hilang, terjadi ketika suatu observasi tidak memiliki nilai pada satu atau lebih variabel yang diamati [@little2019]. Hal Ini bisa disebabkan oleh kesalahan pencatatan, keterbatasan teknis selama proses pengumpulan data, atau kondisi tertentu di mana data memang tidak tersedia. Misalnya, dalam analisis data pembangunan ini, jika data IPM hilang, sulit menyimpulkan tingkat pembangunan wilayah secara keseluruhan
 
 Pada penelitian ini, penanganan dilakukan terhadap baris data yang memiliki \textit{missing value} dalam dataset pembangunan wilayah menggunakan bahasa pemrograman R, yang dimulai dengan mengukur terlebih dahulu seberapa besar pengaruhnya dalam data.
 
@@ -441,7 +444,7 @@ knitr::kable(hasil_normalitas, caption = "Hasil Uji Normalitas Shapiro-Wilk", co
 
 ```
 
-Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap variabel IPM, kemiskinan, dan akses internet dengan tingkat signifikansi sebesar 5\% ($\alpha = 0,05$). Berdasarkan Tabel 3.7, ketiga variabel memiliki nilai p-value yang jauh lebih kecil dari 0,05 sehingga disimpulkan bahwa data **tidak berdistribusi normal**.
+Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap variabel IPM, kemiskinan, dan akses internet dengan tingkat signifikansi sebesar 5\% ($\alpha = 0,05$).Uji normalitas Shapiro-Wilk digunakan untuk mengetahui apakah suatu variabel mengikuti distribusi normal atau tidak. Suatu data dianggap berdistribusi normal apabila nilai p-value lebih besar dari 0,05 [@montgomery2018]. Berdasarkan Tabel 3.7, ketiga variabel memiliki nilai p-value yang jauh lebih kecil dari 0,05 sehingga disimpulkan bahwa data **tidak berdistribusi normal**.
 
 Berdasarkan grafik \textit{boxplot}, variabel PDRB per kapita memiliki distribusi yang sangat menjulur. Kotak interkuartil dan garis median menumpuk sangat rendah di bagian bawah mendekati nilai $0.0$, namun di atas garis batas \textit{whisker} atas ditemukan beberapa titik pencilan (\textit{outliers}) ekstrem yang berada pada kisaran nilai $1.0 \times 10^9$ hingga mendekati $1.8 \times 10^9$.
 
@@ -454,7 +457,7 @@ Terakhir, distribusi tingkat kemiskinan memiliki rata-rata sebesar 13,72\% denga
 ## \normalsize 3.6  \hspace {0.5cm} Korelasi
 
 \vspace{-0.5cm}
-Analisis korelasi merupakan metode statistik yang digunakan untuk mengetahui hubungan antar variabel dalam suatu dataset. Pada penelitian ini, analisis korelasi dilakukan menggunakan metode \textit{Pearson} untuk mengukur kekuatan serta arah hubungan linear antar variabel pembangunan wilayah.
+Analisis korelasi merupakan metode statistik yang digunakan untuk untuk mengukur kekuatan dan arah hubungan linear antara dua variabel numerik [@walpole2018]. Pada penelitian ini, analisis korelasi dilakukan menggunakan metode \textit{Pearson} untuk mengukur kekuatan serta arah hubungan linear antar variabel pembangunan wilayah.
 
 Variabel yang dianalisis meliputi \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{ipm}, \textit{harapan\_hidup}, \textit{rata\_lama\_sekolah}, dan \textit{akses\_internet}. Hasil analisis korelasi ditampilkan dalam bentuk ringkasan berikut.
 
@@ -492,7 +495,7 @@ Berdasarkan seluruh hasil analisis yang telah dilakukan pada dataset pembangunan
 
 Pada analisis statistika deskriptif, variabel \textit{pdrb\_perkapita} menunjukkan nilai rata-rata yang tinggi dengan standar deviasi terbesar, yang mengindikasikan adanya ketimpangan ekonomi antar wilayah. Sementara itu, variabel \textit{ipm}, \textit{harapan\_hidup}, dan \textit{rata\_lama\_sekolah} memiliki penyebaran yang relatif kecil, sehingga dapat dikatakan lebih stabil dibandingkan variabel ekonomi.
 
-Dari analisis \textit{missing value}, diketahui bahwa proporsi data yang hilang relatif kecil, yaitu sekitar 1\% pada setiap variabel. Oleh karena itu, metode penghapusan data dipilih karena tidak memberikan dampak signifikan terhadap representativitas data secara keseluruhan.
+Dari analisis \textit{missing value}, diketahui bahwa proporsi data yang hilang relatif kecil, yaitu sekitar 1\% pada setiap variabel. Oleh karena itu, metode penghapusan data dipilih karena tidak memberikan dampak signifikan terhadap representativitas data secara keseluruhan [@little2019].
 
 Selanjutnya, pada analisis \textit{outlier}, ditemukan bahwa variabel \textit{pdrb\_perkapita}, \textit{kemiskinan}, dan \textit{pengangguran} memiliki nilai ekstrem. Keberadaan \textit{outlier} ini terbukti mempengaruhi nilai rata-rata, terutama pada variabel \textit{pdrb\_perkapita} yang mengalami perubahan paling besar setelah penghapusan \textit{outlier}. Hal ini menunjukkan adanya beberapa wilayah dengan kondisi ekonomi yang sangat berbeda dibandingkan wilayah lainnya.
 
@@ -548,6 +551,15 @@ Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan d
 4. Memperbarui dataset secara berkala agar hasil analisis dapat mencerminkan kondisi pembangunan yang lebih aktual.
 
 \setcounter{page}{4}
+
+\newpage
+
+\begin{center}
+{\bfseries\Large DAFTAR PUSTAKA}
+\end{center}
+::: {#refs}
+::: 
+
 \newpage
 
 \begin{center}
