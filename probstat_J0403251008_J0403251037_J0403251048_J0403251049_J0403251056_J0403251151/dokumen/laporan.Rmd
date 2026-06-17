@@ -330,7 +330,10 @@ jalan\_baik & 25 & 1\% \\
 
 Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}.
 
-
+```{r visualisasi_data, echo=FALSE, fig.align='center', out.width='85%'}
+# Memanggil gambar hasil MCAR dari folder gambar
+knitr::include_graphics("../gambar/hasil_MCAR.png")
+```
 
 Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena hasil uji MCAR menunjukkan bahwa \textit{p-value} bernilai 0.515, nilai ini berada jauh di atas batas signifikasi alpha ($\alpha = 0.05$), yang artinya data hilang secara acak.Jadi, penghapusan data yang hilang dianggap tidak memengaruhi hasil analisis secara signifikan.
 
