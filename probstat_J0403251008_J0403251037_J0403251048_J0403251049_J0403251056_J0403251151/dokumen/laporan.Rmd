@@ -416,17 +416,45 @@ Variabel \textit{pdrb\_perkapita} mengalami perubahan rata-rata terbesar setelah
 
 \vspace{-0.5cm}
 
-```{r visualisasi_data, echo=FALSE, fig.align='center', out.width='85%'}
-# Memanggil gambar scatter plot dari folder gambar kelompok
-knitr::include_graphics("../gambar/hubAksesInternetrataLamaSekolah.png")
+### Histogram IPM
+
+```{r hist_ipm, echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("../gambar/histogramIPM.png")
+```
+
+Histogram IPM menunjukkan bahwa sebagian besar wilayah memiliki nilai IPM pada kategori menengah hingga tinggi. Sebaran data relatif terkonsentrasi pada rentang tertentu sehingga menggambarkan kondisi pembangunan manusia yang cukup merata pada sebagian besar wilayah.
+
+### Histogram Kemiskinan
+
+```{r hist_kemiskinan, echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("../gambar/histogramKemiskinan.png")
+```
+
+Histogram tingkat kemiskinan memperlihatkan distribusi yang cenderung menceng ke kanan (right-skewed). Sebagian besar wilayah memiliki tingkat kemiskinan yang relatif rendah, namun terdapat beberapa wilayah dengan tingkat kemiskinan yang jauh lebih tinggi dibandingkan wilayah lainnya.
+
+### Boxplot PDRB Per Kapita
+
+```{r boxplot_pdrb, echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("../gambar/bloxpotPDRBperKapita.png")
+```
+
+Boxplot PDRB per kapita menunjukkan adanya beberapa nilai ekstrem (outlier) pada bagian atas distribusi. Hal ini mengindikasikan adanya kesenjangan ekonomi antarwilayah, di mana beberapa daerah memiliki nilai PDRB per kapita yang jauh lebih tinggi dibandingkan mayoritas wilayah lainnya.
+
+### Scatter Plot Kemiskinan dan IPM
+
+```{r scatter_kemiskinan_ipm, echo=FALSE, fig.align='center', out.width='75%'}
 knitr::include_graphics("../gambar/hubungankemiskinandgIPM.png")
 ```
 
-Berdasarkan visualisasi data yang dilakukan, terdapat beberapa temuan penting mengenai hubungan antar variabel makroekonomi dan sosial. Pertama, analisis diagram pencar (\textit{scatter plot}) antara variabel tingkat akses internet terhadap rata-rata lama sekolah menunjukkan sebaran data yang membentuk pola persegi panjang yang sangat padat. Mayoritas titik observasi terkonsentrasi secara merata pada rentang persentase akses internet antara 20\% hingga 100\%, dengan rata-rata lama sekolah berkisar antara 5 hingga 14 tahun. Secara visual, tidak terlihat adanya tren linier naik ataupun turun yang cukup kuat dan signifikan. Namun, terdapat fenomena menarik di sisi kiri ekstrem grafik (mendekati 0\% akses internet), di mana ditemukan sekitar 5 titik data terisolasi yang berjejer secara vertikal.
+Scatter plot antara tingkat kemiskinan dan IPM menunjukkan hubungan negatif. Semakin tinggi tingkat kemiskinan suatu wilayah, cenderung semakin rendah nilai IPM yang dimiliki wilayah tersebut.
 
-Sementara itu, visualisasi hubungan antara tingkat kemiskinan dan Indeks Pembangunan Manusia (IPM) menunjukkan pemisahan kelompok data (\textit{clustering}) yang sangat kontras. Kelompok pertama membentuk klaster vertikal yang sangat padat di sebelah kiri grafik pada rentang tingkat kemiskinan rendah hingga menengah (antara 2\% hingga 25\%), dengan sebaran nilai IPM yang bervariasi lebar dari skala 55 hingga 85. Sebaliknya, kelompok kedua berada di sisi kanan grafik yang diisi oleh 5 titik data pencilan (\textit{outliers}) yang tersebar renggang pada tingkat kemiskinan ekstrem antara 45\% hingga 70\%.
+### Scatter Plot Akses Internet dan Rata-rata Lama Sekolah
 
-\vspace{0.2cm}
+```{r scatter_internet_sekolah, echo=FALSE, fig.align='center', out.width='75%'}
+knitr::include_graphics("../gambar/hubAksesInternetrataLamaSekolah.png")
+```
+
+Scatter plot antara akses internet dan rata-rata lama sekolah menunjukkan hubungan positif. Wilayah dengan tingkat akses internet yang lebih tinggi cenderung memiliki rata-rata lama sekolah yang lebih tinggi pula.
 
 ## \normalsize 3.5  \hspace {0.5cm} Distribusi Data
 
