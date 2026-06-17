@@ -328,13 +328,13 @@ jalan\_baik & 25 & 1\% \\
 
 \end{center}
 
-Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}. Keberadaan \textit{missing value} ini dapat mempengaruhi hasil analisis statistik, salah satu contohnya adalah mengurangi jumlah observasi yang dapat di analisis.
+Berdasarkan hasil analisis, ditemukan \textit{missing value} pada beberapa variabel seperti \textit{pdrb\_perkapita}, \textit{kemiskinan}, \textit{pengangguran}, \textit{IPM}, \textit{akses\_internet}, dan \textit{jalan\_baik}.
 
-Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berbagai metode statistik. Akibatnya, jumlah data yang tersedia untuk analisis menjadi berkurang sehingga informasi yang diperoleh menjadi kurang lengkap.
 
-Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena proporsi data yang hilang pada setiap variabel relatif kecil yaitu 1\% dari total observasi, dimana tidak menyebabkan berkurangnya representativitas data secara signifikan, sehingga dampaknya terhadap analisis diperkirakan sangat kecil.
 
-Alasan lainnya adalah, metode ini sederhana dan sangat efektif jika jumlah \textit{missing value} kecil, misalnya 1-2\% dari data. Namun, jika jumlah data yang hilang mencapai 30\% atau lebih, metode ini beresiko mengurangi informasi penting dan tidak disarankan.
+Untuk metode penanganan \textit{missing value} itu sendiri, yang kami gunakan adalah penghapusan. Metode ini dipilih karena hasil uji MCAR menunjukkan bahwa \textit{p-value} bernilai 0.515, nilai ini berada jauh di atas batas signifikasi alpha ($\alpha = 0.05$), yang artinya data hilang secara acak.Jadi, penghapusan data yang hilang dianggap tidak memengaruhi hasil analisis secara signifikan.
+
+Dalam beberapa kasus, Keberadaan \textit{missing value} dapat mempengaruhi hasil analisis statistik, salah satu contohnya adalah mengurangi jumlah observasi yang dapat di analisis. Data yang memiliki nilai kosong tidak dapat digunakan secara langsung dalam berbagai metode statistik. Akibatnya, jumlah data yang tersedia untuk analisis menjadi berkurang sehingga informasi yang diperoleh menjadi kurang lengkap.
 
 ## \normalsize 3.3  \hspace {0.5cm} Outlier
 

@@ -1,3 +1,5 @@
+library(naniar)
+
 # ======================
 # 1.3.1 Memahami Dataset
 # ======================
@@ -54,13 +56,19 @@ missing_value <- colSums(is.na(data_pembangunan))
 ("--- Merepresentasikan jumlah missing value tiap variabel ke dalam persentase ---")
 percentage_missing_value <- missing_value / nrow(data_pembangunan) * 100
 
-("--- Menghitung rata-rata persentase missing value dataframe (secara keseluruhan) ---")
-percentage_missing_value_df <- mean(is.na(data_pembangunan)) * 100
-
 ("--- Melihat hasil perhitungan persentase ---")
-print(percentage_missing_value_df)
+print(percentage_missing_value)
 
-("--- Karena persentase 0.4% < 30%, maka metode yang diambil adalah metode penghapusan ---")
+("-- Mengambil seluruh variabel numerik --")
+data_num <- data_pembangunan[, sapply(data_pembangunan, is.numeric)]
+
+("-- Menguji variabel missing value, apakah MCAR atau bukan --")
+hasil_uji_mcar <- mcar_test(data_num)
+
+("-- Melihat hasil uji MCAR --")
+print(hasil_uji_mcar)
+
+("--- Karena nilai missing value terbukti MCAR (0.515 > 0.05), maka digunakan metode penghapusan ---")
 data_pembangunan <- na.omit(data_pembangunan)
 
 ("--- Memeriksa kembali apakah jumlah baris dataset sudah diperbarui setelah penghapusan ---")
