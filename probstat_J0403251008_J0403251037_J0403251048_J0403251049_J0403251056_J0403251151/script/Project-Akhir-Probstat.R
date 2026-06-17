@@ -180,3 +180,46 @@ cat("--- UJI KORELASI: PDRB PERKAPITA vs IPM (KESEJAHTERAAN) ---")
 uji_pdrb_ipm <- cor.test(data_bersih$pdrb_perkapita, data_bersih$ipm)
 print(uji_pdrb_ipm)
 
+# Data hasil korelasi
+data_korelasi <- data.frame(
+  pasangan = c(
+    "PDRB - Kemiskinan",
+    "Pengangguran - PDRB",
+    "IPM - PDRB",
+    "Harapan Hidup - PDRB",
+    "Akses Internet - Kemiskinan",
+    "Akses Internet - IPM"
+  ),
+  korelasi = c(
+    -0.0048,
+    -0.0323,
+    0.0111,
+    0.0125,
+    -0.0309,
+    0.0020
+  )
+)
+
+ggplot(data_korelasi,
+       aes(x = reorder(pasangan, korelasi),
+           y = korelasi)) +
+  
+  geom_col(width = 0.7, fill = "steelblue") +
+  
+  geom_hline(yintercept = 0,
+             linetype = "dashed",
+             linewidth = 1,
+             color = "red") +
+  
+  coord_flip() +
+  
+  ylim(-0.04, 0.02) +
+  
+  labs(
+    title = "Visualisasi Nilai Korelasi Antar Variabel",
+    x = "Pasangan Variabel",
+    y = "Koefisien Korelasi Pearson"
+  ) +
+  
+  theme_minimal(base_size = 12)
+
