@@ -77,6 +77,48 @@ print(nrow(data_pembangunan))
 # ======================
 # 1.3.4 Analisis Outlier
 # ======================
+("--- Histogram Log PDRB Perkapita ---")
+hist(
+  log(data_pembangunan$pdrb_perkapita),
+  main = "Histogram Log PDRB Perkapita",
+  xlab = "Log PDRB Perkapita",
+  probability = TRUE,
+  breaks = 30
+)
+
+lines(
+  density(log(data_pembangunan$pdrb_perkapita), na.rm = TRUE),
+  lwd =2
+)
+
+("--- Histogram Log Kemiskinan ---")
+hist(
+  log(data_pembangunan$kemiskinan),
+  main = "Histogram Log Kemiskinan",
+  xlab = "Log Kemiskinan",
+  probability = TRUE,
+  breaks = 30
+)
+
+lines(
+  density(log(data_pembangunan$kemiskinan), na.rm = TRUE),
+  lwd =2
+)
+
+("--- Histogram Log Pengangguran ---")
+hist(
+  log(data_pembangunan$pengangguran),
+  main = "Histogram Log Pengangguran",
+  xlab = "Log Pengangguran",
+  probability = TRUE,
+  breaks = 30
+)
+
+lines(
+  density(log(data_pembangunan$pengangguran), na.rm = TRUE),
+  lwd =2
+)
+
 ("--- Mengambil kolom variabel yang bertipe data numerik ---")
 numeric_columns_name <- names(data_pembangunan)[sapply(data_pembangunan, is.numeric)]
 
