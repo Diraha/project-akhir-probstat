@@ -54,7 +54,7 @@ round(sapply(data_numerik, quantile, na.rm = TRUE), 2)
 missing_value <- colSums(is.na(data_pembangunan))
 
 ("--- Merepresentasikan jumlah missing value tiap variabel ke dalam persentase ---")
-percentage_missing_value <- missing_value / nrow(data_pembangunan) * 100
+percentage_missing_value <- missing_value
 
 ("--- Melihat hasil perhitungan persentase ---")
 print(percentage_missing_value)

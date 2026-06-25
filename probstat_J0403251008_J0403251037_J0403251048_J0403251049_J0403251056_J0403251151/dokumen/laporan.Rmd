@@ -79,6 +79,9 @@ Fahrizal Azis & J0403251151\\
 \thispagestyle{empty}
 \newpage
 
+\pagenumbering{roman}
+\setcounter{page}{1}
+
 \begin{center}
 {
 \bfseries
@@ -122,9 +125,12 @@ LAMPIRAN \dotfill 5\\
 \hspace*{0.5cm}5.2 Output Tambahan \dotfill 5\\[0.3cm]
 \end{flushleft}
 
-\thispagestyle{empty}
 
 \newpage
+
+\clearpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
 \begin{center}
 {
@@ -232,7 +238,7 @@ Analisis data dilakukan menggunakan bahasa pemrograman R untuk memperoleh gambar
 5. **Visualisasi Data:** Visualisasi dilakukan untuk mempermudah interpretasi data menggunakan histogram, boxplot, scatter plot, dan heatmap korelasi untuk membantu memahami pola dan karakteristik data secara lebih efektif [@wickham2016].
 6. **Analisis Korelasi:** Analisis korelasi digunakan untuk mengetahui kekuatan dan arah hubungan antar variabel numerik [@hair2019]. Kolerasi dihitung menggunakan koefisien korelasi pearson dengan rentang nilai $−1 \le r \le 1$. Nilai korelasi yang mendekati 1 menunjukkan hubungan positif yang kuat, sedangkan nilai yang mendekati -1 menunjukkan hubungan negatif yang kuat.
 
-\setcounter{page}{2}
+\setcounter{page}{5}
 \newpage
 
 \begin{center}
@@ -493,17 +499,22 @@ Scatter plot antara akses internet dan rata-rata lama sekolah menunjukkan hubung
 
 \vspace{-0.5cm}
 
-```{r tabel_normalitas, echo=FALSE}
-# Membuat dataframe hasil uji normalitas sesuai output console R asli kelompok
-hasil_normalitas <- data.frame(
-  Variabel = c("IPM", "Kemiskinan", "Akses Internet"),
-  P_Value = c("2.379285e-25", "2.377348e-29", "6.137887e-26"),
-  Kesimpulan = c("Tidak Berdistribusi Normal", "Tidak Berdistribusi Normal", "Tidak Berdistribusi Normal")
-)
+\begin{center}
+\textbf{Tabel 3.6 Hasil Uji Normalitas Shapiro-Wilk}
 
-knitr::kable(hasil_normalitas, caption = "Hasil Uji Normalitas Shapiro-Wilk", col.names = c("Variabel", "P-Value", "Kesimpulan"))
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Variabel} & \textbf{P-Value} & \textbf{Kesimpulan} \\
+\hline
+IPM & 2.379285e-25 & Tidak Berdistribusi Normal \\
+\hline
+Kemiskinan & 2.377348e-29 & Tidak Berdistribusi Normal \\
+\hline
+Akses Internet & 6.137887e-26 & Tidak Berdistribusi Normal \\
+\hline
+\end{tabular}
 
-```
+\end{center}
 
 Analisis distribusi data dilakukan untuk mengetahui karakteristik sebaran data serta menilai apakah data mengikuti distribusi normal atau tidak. Pada penelitian ini digunakan uji normalitas Shapiro-Wilk terhadap variabel IPM, kemiskinan, dan akses internet dengan tingkat signifikansi sebesar 5\% ($\alpha = 0,05$).Uji normalitas Shapiro-Wilk digunakan untuk mengetahui apakah suatu variabel mengikuti distribusi normal atau tidak. Suatu data dianggap berdistribusi normal apabila nilai p-value lebih besar dari 0,05 [@montgomery2018]. Berdasarkan Tabel 3.7, ketiga variabel memiliki nilai p-value yang jauh lebih kecil dari 0,05 sehingga disimpulkan bahwa data **tidak berdistribusi normal**.
 
@@ -525,7 +536,7 @@ Variabel yang dianalisis meliputi \textit{pdrb\_perkapita}, \textit{kemiskinan},
 \vspace{-0.5cm}
 
 \begin{center}
-\textbf{Tabel 3.8 Hasil Analisis Korelasi}
+\textbf{Tabel 3.7 Hasil Analisis Korelasi}
 
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -549,7 +560,7 @@ akses\_internet & ipm & 0,0020 & Sangat lemah (positif) \\
 Berdasarkan hasil analisis, seluruh nilai korelasi berada sangat dekat dengan nol, yaitu dalam rentang sekitar -0,03 hingga 0,01. 
 
 \begin{center}
-\textbf{Gambar 3.9 Diagram Batang Horizontal Koefisien Korelasi Antar Variabel Pembangunan Wilayah}
+\textbf{Gambar 3.6 Diagram Batang Horizontal Koefisien Korelasi Antar Variabel Pembangunan Wilayah}
 
 \includegraphics[width=15cm]{../gambar/visualisasi_nilai_korelasi.png}
 \end{center}
@@ -573,7 +584,7 @@ Hasil analisis korelasi menunjukkan bahwa seluruh hubungan antar variabel memili
 
 Secara keseluruhan, hasil analisis menunjukkan bahwa pembangunan wilayah merupakan fenomena yang kompleks dan tidak dapat dijelaskan hanya dengan hubungan linear sederhana. Terdapat ketimpangan pada beberapa indikator ekonomi, serta variasi antar wilayah yang cukup tinggi, sehingga diperlukan analisis lanjutan yang lebih mendalam untuk memahami faktor-faktor yang mempengaruhi pembangunan wilayah secara komprehensif.
 
-\setcounter{page}{3}
+\setcounter{page}{20}
 \newpage
 
 \begin{center}
@@ -618,7 +629,7 @@ Hasil analisis korelasi menunjukkan bahwa hubungan antar indikator pembangunan d
 3. Melakukan visualisasi yang lebih mendalam menggunakan histogram, scatter plot, dan heatmap korelasi.
 4. Memperbarui dataset secara berkala agar hasil analisis dapat mencerminkan kondisi pembangunan yang lebih aktual.
 
-\setcounter{page}{4}
+\setcounter{page}{22}
 
 \newpage
 
